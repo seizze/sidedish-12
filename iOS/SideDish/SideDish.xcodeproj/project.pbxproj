@@ -19,6 +19,10 @@
 		C2D8E0FF244F301100F4031F /* BadgeStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D8E0FE244F301100F4031F /* BadgeStackView.swift */; };
 		C2D8E103244F35EE00F4031F /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D8E102244F35EE00F4031F /* UIColorExtension.swift */; };
 		C2D8E105244F38A000F4031F /* BadgeLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D8E104244F38A000F4031F /* BadgeLabel.swift */; };
+		C2D8E107244F3CA400F4031F /* EventBadge.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D8E106244F3CA400F4031F /* EventBadge.swift */; };
+		C2D8E109244F3CB200F4031F /* LaunchingBadge.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D8E108244F3CB200F4031F /* LaunchingBadge.swift */; };
+		C2D8E10B244F3CF300F4031F /* OutOfStockBadge.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D8E10A244F3CF300F4031F /* OutOfStockBadge.swift */; };
+		C2D8E10D244F3D2000F4031F /* FreeGiftBadge.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D8E10C244F3D2000F4031F /* FreeGiftBadge.swift */; };
 		C2E88278244EE65800E2CECA /* SideDishCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E88277244EE65800E2CECA /* SideDishCell.swift */; };
 		C2E8827A244EE82F00E2CECA /* SideDishHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E88279244EE82F00E2CECA /* SideDishHeaderView.swift */; };
 		C2E88281244F007500E2CECA /* SideDishDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E88280244F007500E2CECA /* SideDishDataSource.swift */; };
@@ -53,6 +57,10 @@
 		C2D8E0FE244F301100F4031F /* BadgeStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgeStackView.swift; sourceTree = "<group>"; };
 		C2D8E102244F35EE00F4031F /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		C2D8E104244F38A000F4031F /* BadgeLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BadgeLabel.swift; sourceTree = "<group>"; };
+		C2D8E106244F3CA400F4031F /* EventBadge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventBadge.swift; sourceTree = "<group>"; };
+		C2D8E108244F3CB200F4031F /* LaunchingBadge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchingBadge.swift; sourceTree = "<group>"; };
+		C2D8E10A244F3CF300F4031F /* OutOfStockBadge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutOfStockBadge.swift; sourceTree = "<group>"; };
+		C2D8E10C244F3D2000F4031F /* FreeGiftBadge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreeGiftBadge.swift; sourceTree = "<group>"; };
 		C2E88277244EE65800E2CECA /* SideDishCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideDishCell.swift; sourceTree = "<group>"; };
 		C2E88279244EE82F00E2CECA /* SideDishHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideDishHeaderView.swift; sourceTree = "<group>"; };
 		C2E88280244F007500E2CECA /* SideDishDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideDishDataSource.swift; sourceTree = "<group>"; };
@@ -140,6 +148,10 @@
 			isa = PBXGroup;
 			children = (
 				C2D8E104244F38A000F4031F /* BadgeLabel.swift */,
+				C2D8E106244F3CA400F4031F /* EventBadge.swift */,
+				C2D8E108244F3CB200F4031F /* LaunchingBadge.swift */,
+				C2D8E10A244F3CF300F4031F /* OutOfStockBadge.swift */,
+				C2D8E10C244F3D2000F4031F /* FreeGiftBadge.swift */,
 			);
 			path = Badges;
 			sourceTree = "<group>";
@@ -270,12 +282,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C2D8E109244F3CB200F4031F /* LaunchingBadge.swift in Sources */,
 				C2E88283244F05B600E2CECA /* ReusableView.swift in Sources */,
 				C2E88286244F06D900E2CECA /* SideDishDelegate.swift in Sources */,
+				C2D8E10D244F3D2000F4031F /* FreeGiftBadge.swift in Sources */,
 				C2E88281244F007500E2CECA /* SideDishDataSource.swift in Sources */,
+				C2D8E10B244F3CF300F4031F /* OutOfStockBadge.swift in Sources */,
 				C2CD5E78244EC65A000C41B8 /* RoundImageView.swift in Sources */,
 				C2E88278244EE65800E2CECA /* SideDishCell.swift in Sources */,
 				C2E8827A244EE82F00E2CECA /* SideDishHeaderView.swift in Sources */,
+				C2D8E107244F3CA400F4031F /* EventBadge.swift in Sources */,
 				C2D8E103244F35EE00F4031F /* UIColorExtension.swift in Sources */,
 				C2D8E0FF244F301100F4031F /* BadgeStackView.swift in Sources */,
 				C2CD5E76244EB6D5000C41B8 /* BorderedLabel.swift in Sources */,

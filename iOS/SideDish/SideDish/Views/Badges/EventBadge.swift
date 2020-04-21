@@ -1,5 +1,5 @@
 //
-//  BadgeLabel.swift
+//  EventBadge.swift
 //  SideDish
 //
 //  Created by Chaewan Park on 2020/04/21.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class BadgeLabel: BorderedLabel {
+class EventBadge: BadgeLabel {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -21,9 +21,7 @@ class BadgeLabel: BorderedLabel {
     }
     
     private func setupView() {
-        horizontalInset = 4
-        verticalInset = 2
-        textColor = .white
-        font = font.withSize(12)
+        backgroundColor = .badgePurple
+        text = "이벤트특가"
     }
 }

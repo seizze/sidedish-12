@@ -23,7 +23,10 @@ extension SideDishDataSource: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: SideDishCell.reuseIdentifier, for: indexPath) as? SideDishCell else { return UITableViewCell() }
-        cell.badgeStackView.addArrangedSubview(BadgeLabel())
+        cell.badgeStackView.addArrangedSubview(EventBadge())
+        cell.badgeStackView.addArrangedSubview(LaunchingBadge())
+        cell.badgeStackView.addArrangedSubview(OutOfStockBadge())
+        cell.badgeStackView.addArrangedSubview(FreeGiftBadge())
         return cell
     }
 }

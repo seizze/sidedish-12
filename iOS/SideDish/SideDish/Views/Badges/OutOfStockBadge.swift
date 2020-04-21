@@ -1,5 +1,5 @@
 //
-//  BadgeLabel.swift
+//  OutOfStockBadge.swift
 //  SideDish
 //
 //  Created by Chaewan Park on 2020/04/21.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class BadgeLabel: BorderedLabel {
+class OutOfStockBadge: BadgeLabel {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -21,9 +21,7 @@ class BadgeLabel: BorderedLabel {
     }
     
     private func setupView() {
-        horizontalInset = 4
-        verticalInset = 2
-        textColor = .white
-        font = font.withSize(12)
+        backgroundColor = .badgeDarkGray
+        text = "  품절  "
     }
 }
