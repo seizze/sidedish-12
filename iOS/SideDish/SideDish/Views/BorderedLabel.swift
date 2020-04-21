@@ -9,7 +9,7 @@
 import UIKit
 
 @IBDesignable
-class CategoryLabel: UILabel {
+class BorderedLabel: UILabel {
     
     @IBInspectable var horizontalInset: CGFloat = 0
     @IBInspectable var verticalInset: CGFloat = 0
