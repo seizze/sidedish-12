@@ -70,7 +70,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="N54-wX-zL9" userLabel="Product Stack View">
-                                                    <rect key="frame" x="149" y="26.5" width="249" height="96.5"/>
+                                                    <rect key="frame" x="149" y="25.5" width="249" height="98.5"/>
                                                     <subviews>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="1ly-ZG-uyd" userLabel="Title Stack View">
                                                             <rect key="frame" x="0.0" y="0.0" width="110.5" height="39.5"/>
@@ -124,16 +124,8 @@
                                                                 </stackView>
                                                             </subviews>
                                                         </stackView>
-                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="sdD-SG-vc3" userLabel="Badge Stack View">
-                                                            <rect key="frame" x="0.0" y="78.5" width="26" height="18"/>
-                                                            <subviews>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="배지" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fop-WM-Iuo">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="26" height="18"/>
-                                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                                    <nil key="textColor"/>
-                                                                    <nil key="highlightedColor"/>
-                                                                </label>
-                                                            </subviews>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="sdD-SG-vc3" userLabel="Badge Stack View" customClass="BadgeStackView" customModule="SideDish" customModuleProvider="target">
+                                                            <rect key="frame" x="0.0" y="78.5" width="30" height="20"/>
                                                         </stackView>
                                                     </subviews>
                                                 </stackView>

@@ -16,6 +16,7 @@
 		C29699AE244E956600CE191F /* SideDishTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C29699AD244E956600CE191F /* SideDishTests.swift */; };
 		C2CD5E76244EB6D5000C41B8 /* BorderedLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CD5E75244EB6D5000C41B8 /* BorderedLabel.swift */; };
 		C2CD5E78244EC65A000C41B8 /* RoundImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CD5E77244EC65A000C41B8 /* RoundImageView.swift */; };
+		C2D8E0FF244F301100F4031F /* BadgeStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D8E0FE244F301100F4031F /* BadgeStackView.swift */; };
 		C2E88278244EE65800E2CECA /* SideDishCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E88277244EE65800E2CECA /* SideDishCell.swift */; };
 		C2E8827A244EE82F00E2CECA /* SideDishHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E88279244EE82F00E2CECA /* SideDishHeaderView.swift */; };
 		C2E88281244F007500E2CECA /* SideDishDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E88280244F007500E2CECA /* SideDishDataSource.swift */; };
@@ -47,6 +48,7 @@
 		C29699AF244E956600CE191F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C2CD5E75244EB6D5000C41B8 /* BorderedLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BorderedLabel.swift; sourceTree = "<group>"; };
 		C2CD5E77244EC65A000C41B8 /* RoundImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundImageView.swift; sourceTree = "<group>"; };
+		C2D8E0FE244F301100F4031F /* BadgeStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgeStackView.swift; sourceTree = "<group>"; };
 		C2E88277244EE65800E2CECA /* SideDishCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideDishCell.swift; sourceTree = "<group>"; };
 		C2E88279244EE82F00E2CECA /* SideDishHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideDishHeaderView.swift; sourceTree = "<group>"; };
 		C2E88280244F007500E2CECA /* SideDishDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideDishDataSource.swift; sourceTree = "<group>"; };
@@ -120,12 +122,21 @@
 		C2CD5E74244EB68C000C41B8 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				C2D8E0FB244F2C8100F4031F /* Badges */,
 				C2CD5E75244EB6D5000C41B8 /* BorderedLabel.swift */,
 				C2CD5E77244EC65A000C41B8 /* RoundImageView.swift */,
 				C2E88277244EE65800E2CECA /* SideDishCell.swift */,
 				C2E88279244EE82F00E2CECA /* SideDishHeaderView.swift */,
+				C2D8E0FE244F301100F4031F /* BadgeStackView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		C2D8E0FB244F2C8100F4031F /* Badges */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Badges;
 			sourceTree = "<group>";
 		};
 		C2E8827E244F005300E2CECA /* DataSources */ = {
@@ -259,6 +270,7 @@
 				C2CD5E78244EC65A000C41B8 /* RoundImageView.swift in Sources */,
 				C2E88278244EE65800E2CECA /* SideDishCell.swift in Sources */,
 				C2E8827A244EE82F00E2CECA /* SideDishHeaderView.swift in Sources */,
+				C2D8E0FF244F301100F4031F /* BadgeStackView.swift in Sources */,
 				C2CD5E76244EB6D5000C41B8 /* BorderedLabel.swift in Sources */,
 				C296999B244E956200CE191F /* ViewController.swift in Sources */,
 				C2969997244E956200CE191F /* AppDelegate.swift in Sources */,
