@@ -14,6 +14,7 @@
 		C29699A0244E956600CE191F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C296999F244E956600CE191F /* Assets.xcassets */; };
 		C29699A3244E956600CE191F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C29699A1244E956600CE191F /* LaunchScreen.storyboard */; };
 		C29699AE244E956600CE191F /* SideDishTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C29699AD244E956600CE191F /* SideDishTests.swift */; };
+		C2CD5E76244EB6D5000C41B8 /* CategoryLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CD5E75244EB6D5000C41B8 /* CategoryLabel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		C29699A9244E956600CE191F /* SideDishTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SideDishTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C29699AD244E956600CE191F /* SideDishTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideDishTests.swift; sourceTree = "<group>"; };
 		C29699AF244E956600CE191F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C2CD5E75244EB6D5000C41B8 /* CategoryLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryLabel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 		C2969995244E956200CE191F /* SideDish */ = {
 			isa = PBXGroup;
 			children = (
+				C2CD5E74244EB68C000C41B8 /* Views */,
 				C2969996244E956200CE191F /* AppDelegate.swift */,
 				C2969998244E956200CE191F /* SceneDelegate.swift */,
 				C296999A244E956200CE191F /* ViewController.swift */,
@@ -97,6 +100,14 @@
 				C29699AF244E956600CE191F /* Info.plist */,
 			);
 			path = SideDishTests;
+			sourceTree = "<group>";
+		};
+		C2CD5E74244EB68C000C41B8 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C2CD5E75244EB6D5000C41B8 /* CategoryLabel.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -200,6 +211,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C2CD5E76244EB6D5000C41B8 /* CategoryLabel.swift in Sources */,
 				C296999B244E956200CE191F /* ViewController.swift in Sources */,
 				C2969997244E956200CE191F /* AppDelegate.swift in Sources */,
 				C2969999244E956200CE191F /* SceneDelegate.swift in Sources */,
