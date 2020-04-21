@@ -15,6 +15,7 @@
 		C29699A3244E956600CE191F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C29699A1244E956600CE191F /* LaunchScreen.storyboard */; };
 		C29699AE244E956600CE191F /* SideDishTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C29699AD244E956600CE191F /* SideDishTests.swift */; };
 		C2CD5E76244EB6D5000C41B8 /* CategoryLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CD5E75244EB6D5000C41B8 /* CategoryLabel.swift */; };
+		C2CD5E78244EC65A000C41B8 /* RoundImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CD5E77244EC65A000C41B8 /* RoundImageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,7 @@
 		C29699AD244E956600CE191F /* SideDishTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideDishTests.swift; sourceTree = "<group>"; };
 		C29699AF244E956600CE191F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C2CD5E75244EB6D5000C41B8 /* CategoryLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryLabel.swift; sourceTree = "<group>"; };
+		C2CD5E77244EC65A000C41B8 /* RoundImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundImageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 			isa = PBXGroup;
 			children = (
 				C2CD5E75244EB6D5000C41B8 /* CategoryLabel.swift */,
+				C2CD5E77244EC65A000C41B8 /* RoundImageView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -211,6 +214,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C2CD5E78244EC65A000C41B8 /* RoundImageView.swift in Sources */,
 				C2CD5E76244EB6D5000C41B8 /* CategoryLabel.swift in Sources */,
 				C296999B244E956200CE191F /* ViewController.swift in Sources */,
 				C2969997244E956200CE191F /* AppDelegate.swift in Sources */,
