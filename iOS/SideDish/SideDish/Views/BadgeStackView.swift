@@ -12,6 +12,6 @@ import UIKit
 class BadgeStackView: UIStackView {
     
     override var intrinsicContentSize: CGSize {
-        return CGSize(width: 30, height: 20)
+        return CGSize(width: 30, height: 19)
     }
 }

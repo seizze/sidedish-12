@@ -22,8 +22,8 @@ class BadgeLabel: BorderedLabel {
     
     private func setupView() {
         horizontalInset = 4
-        verticalInset = 2
+        verticalInset = 1
         textColor = .white
-        font = font.withSize(12)
+        font = font.withSize(10)
     }
 }
