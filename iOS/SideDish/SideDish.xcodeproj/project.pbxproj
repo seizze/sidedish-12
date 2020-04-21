@@ -18,6 +18,7 @@
 		C2CD5E78244EC65A000C41B8 /* RoundImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CD5E77244EC65A000C41B8 /* RoundImageView.swift */; };
 		C2E88278244EE65800E2CECA /* SideDishCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E88277244EE65800E2CECA /* SideDishCell.swift */; };
 		C2E8827A244EE82F00E2CECA /* SideDishHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E88279244EE82F00E2CECA /* SideDishHeaderCell.swift */; };
+		C2E88281244F007500E2CECA /* SideDishDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E88280244F007500E2CECA /* SideDishDataSource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,7 @@
 		C2CD5E77244EC65A000C41B8 /* RoundImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundImageView.swift; sourceTree = "<group>"; };
 		C2E88277244EE65800E2CECA /* SideDishCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideDishCell.swift; sourceTree = "<group>"; };
 		C2E88279244EE82F00E2CECA /* SideDishHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideDishHeaderCell.swift; sourceTree = "<group>"; };
+		C2E88280244F007500E2CECA /* SideDishDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideDishDataSource.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,7 +89,9 @@
 		C2969995244E956200CE191F /* SideDish */ = {
 			isa = PBXGroup;
 			children = (
+				C2E8827F244F006400E2CECA /* Utils */,
 				C2CD5E74244EB68C000C41B8 /* Views */,
+				C2E8827E244F005300E2CECA /* DataSources */,
 				C2969996244E956200CE191F /* AppDelegate.swift */,
 				C2969998244E956200CE191F /* SceneDelegate.swift */,
 				C296999A244E956200CE191F /* ViewController.swift */,
@@ -117,6 +121,21 @@
 				C2E88279244EE82F00E2CECA /* SideDishHeaderCell.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		C2E8827E244F005300E2CECA /* DataSources */ = {
+			isa = PBXGroup;
+			children = (
+				C2E88280244F007500E2CECA /* SideDishDataSource.swift */,
+			);
+			path = DataSources;
+			sourceTree = "<group>";
+		};
+		C2E8827F244F006400E2CECA /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -220,6 +239,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C2E88281244F007500E2CECA /* SideDishDataSource.swift in Sources */,
 				C2CD5E78244EC65A000C41B8 /* RoundImageView.swift in Sources */,
 				C2E88278244EE65800E2CECA /* SideDishCell.swift in Sources */,
 				C2E8827A244EE82F00E2CECA /* SideDishHeaderCell.swift in Sources */,

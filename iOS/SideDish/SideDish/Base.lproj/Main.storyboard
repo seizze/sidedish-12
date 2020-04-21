@@ -42,9 +42,6 @@
                                                                 <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
                                                                     <real key="value" value="0.69999999999999996"/>
                                                                 </userDefinedRuntimeAttribute>
-                                                                <userDefinedRuntimeAttribute type="number" keyPath="inset">
-                                                                    <real key="value" value="2"/>
-                                                                </userDefinedRuntimeAttribute>
                                                                 <userDefinedRuntimeAttribute type="number" keyPath="horizontalInset">
                                                                     <real key="value" value="3"/>
                                                                 </userDefinedRuntimeAttribute>
@@ -179,6 +176,9 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="A59-HT-GZL"/>
+                    <connections>
+                        <outlet property="tableView" destination="D56-Is-011" id="rWm-OJ-yX3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
