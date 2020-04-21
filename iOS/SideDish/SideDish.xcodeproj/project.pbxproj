@@ -19,6 +19,7 @@
 		C2E88278244EE65800E2CECA /* SideDishCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E88277244EE65800E2CECA /* SideDishCell.swift */; };
 		C2E8827A244EE82F00E2CECA /* SideDishHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E88279244EE82F00E2CECA /* SideDishHeaderCell.swift */; };
 		C2E88281244F007500E2CECA /* SideDishDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E88280244F007500E2CECA /* SideDishDataSource.swift */; };
+		C2E88283244F05B600E2CECA /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E88282244F05B600E2CECA /* ReusableView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,7 @@
 		C2E88277244EE65800E2CECA /* SideDishCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideDishCell.swift; sourceTree = "<group>"; };
 		C2E88279244EE82F00E2CECA /* SideDishHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideDishHeaderCell.swift; sourceTree = "<group>"; };
 		C2E88280244F007500E2CECA /* SideDishDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideDishDataSource.swift; sourceTree = "<group>"; };
+		C2E88282244F05B600E2CECA /* ReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +136,7 @@
 		C2E8827F244F006400E2CECA /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				C2E88282244F05B600E2CECA /* ReusableView.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -239,6 +242,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C2E88283244F05B600E2CECA /* ReusableView.swift in Sources */,
 				C2E88281244F007500E2CECA /* SideDishDataSource.swift in Sources */,
 				C2CD5E78244EC65A000C41B8 /* RoundImageView.swift in Sources */,
 				C2E88278244EE65800E2CECA /* SideDishCell.swift in Sources */,

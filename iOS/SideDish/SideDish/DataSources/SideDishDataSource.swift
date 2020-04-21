@@ -18,7 +18,7 @@ extension SideDishDataSource: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "SideDishCell", for: indexPath) as? SideDishCell else { return UITableViewCell() }
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: SideDishCell.reuseIdentifier, for: indexPath) as? SideDishCell else { return UITableViewCell() }
         return cell
     }
 }
