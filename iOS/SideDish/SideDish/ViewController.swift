@@ -21,6 +21,6 @@ class ViewController: UIViewController {
         tableView.delegate = delegate
         tableView.dataSource = dataSource
         
-        tableView.register(SideDishHeaderView.self, forHeaderFooterViewReuseIdentifier: SideDishHeaderView.reuseIdentifier)
+        tableView.register(SideDishHeaderView.nib, forHeaderFooterViewReuseIdentifier: SideDishHeaderView.reuseIdentifier)
     }
 }

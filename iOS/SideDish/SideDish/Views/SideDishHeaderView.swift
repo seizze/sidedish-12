@@ -10,4 +10,7 @@ import UIKit
 
 class SideDishHeaderView: UITableViewHeaderFooterView {
     
+    static var nib: UINib {
+        return UINib(nibName: String(describing: self), bundle: nil)
+    }
 }
