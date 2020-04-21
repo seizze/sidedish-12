@@ -12,12 +12,15 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
+    private let delegate = SideDishDelegate()
     private let dataSource = SideDishDataSource()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        tableView.delegate = delegate
         tableView.dataSource = dataSource
         
+        tableView.register(SideDishHeaderView.self, forHeaderFooterViewReuseIdentifier: SideDishHeaderView.reuseIdentifier)
     }
 }

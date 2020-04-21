@@ -19,4 +19,4 @@ extension ReusableView {
 }
 
 extension SideDishCell: ReusableView {}
-extension SideDishHeaderCell: ReusableView {}
+extension SideDishHeaderView: ReusableView {}

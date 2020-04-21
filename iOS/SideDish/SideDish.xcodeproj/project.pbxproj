@@ -17,9 +17,10 @@
 		C2CD5E76244EB6D5000C41B8 /* BorderedLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CD5E75244EB6D5000C41B8 /* BorderedLabel.swift */; };
 		C2CD5E78244EC65A000C41B8 /* RoundImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CD5E77244EC65A000C41B8 /* RoundImageView.swift */; };
 		C2E88278244EE65800E2CECA /* SideDishCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E88277244EE65800E2CECA /* SideDishCell.swift */; };
-		C2E8827A244EE82F00E2CECA /* SideDishHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E88279244EE82F00E2CECA /* SideDishHeaderCell.swift */; };
+		C2E8827A244EE82F00E2CECA /* SideDishHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E88279244EE82F00E2CECA /* SideDishHeaderView.swift */; };
 		C2E88281244F007500E2CECA /* SideDishDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E88280244F007500E2CECA /* SideDishDataSource.swift */; };
 		C2E88283244F05B600E2CECA /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E88282244F05B600E2CECA /* ReusableView.swift */; };
+		C2E88286244F06D900E2CECA /* SideDishDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E88285244F06D900E2CECA /* SideDishDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,9 +48,10 @@
 		C2CD5E75244EB6D5000C41B8 /* BorderedLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BorderedLabel.swift; sourceTree = "<group>"; };
 		C2CD5E77244EC65A000C41B8 /* RoundImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundImageView.swift; sourceTree = "<group>"; };
 		C2E88277244EE65800E2CECA /* SideDishCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideDishCell.swift; sourceTree = "<group>"; };
-		C2E88279244EE82F00E2CECA /* SideDishHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideDishHeaderCell.swift; sourceTree = "<group>"; };
+		C2E88279244EE82F00E2CECA /* SideDishHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideDishHeaderView.swift; sourceTree = "<group>"; };
 		C2E88280244F007500E2CECA /* SideDishDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideDishDataSource.swift; sourceTree = "<group>"; };
 		C2E88282244F05B600E2CECA /* ReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableView.swift; sourceTree = "<group>"; };
+		C2E88285244F06D900E2CECA /* SideDishDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideDishDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +96,7 @@
 				C2E8827F244F006400E2CECA /* Utils */,
 				C2CD5E74244EB68C000C41B8 /* Views */,
 				C2E8827E244F005300E2CECA /* DataSources */,
+				C2E88284244F06BE00E2CECA /* Delegates */,
 				C2969996244E956200CE191F /* AppDelegate.swift */,
 				C2969998244E956200CE191F /* SceneDelegate.swift */,
 				C296999A244E956200CE191F /* ViewController.swift */,
@@ -120,7 +123,7 @@
 				C2CD5E75244EB6D5000C41B8 /* BorderedLabel.swift */,
 				C2CD5E77244EC65A000C41B8 /* RoundImageView.swift */,
 				C2E88277244EE65800E2CECA /* SideDishCell.swift */,
-				C2E88279244EE82F00E2CECA /* SideDishHeaderCell.swift */,
+				C2E88279244EE82F00E2CECA /* SideDishHeaderView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -139,6 +142,14 @@
 				C2E88282244F05B600E2CECA /* ReusableView.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		C2E88284244F06BE00E2CECA /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				C2E88285244F06D900E2CECA /* SideDishDelegate.swift */,
+			);
+			path = Delegates;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -243,10 +254,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				C2E88283244F05B600E2CECA /* ReusableView.swift in Sources */,
+				C2E88286244F06D900E2CECA /* SideDishDelegate.swift in Sources */,
 				C2E88281244F007500E2CECA /* SideDishDataSource.swift in Sources */,
 				C2CD5E78244EC65A000C41B8 /* RoundImageView.swift in Sources */,
 				C2E88278244EE65800E2CECA /* SideDishCell.swift in Sources */,
-				C2E8827A244EE82F00E2CECA /* SideDishHeaderCell.swift in Sources */,
+				C2E8827A244EE82F00E2CECA /* SideDishHeaderView.swift in Sources */,
 				C2CD5E76244EB6D5000C41B8 /* BorderedLabel.swift in Sources */,
 				C296999B244E956200CE191F /* ViewController.swift in Sources */,
 				C2969997244E956200CE191F /* AppDelegate.swift in Sources */,

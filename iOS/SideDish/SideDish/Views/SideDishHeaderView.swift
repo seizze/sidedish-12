@@ -1,5 +1,5 @@
 //
-//  SideDishHeaderCell.swift
+//  SideDishHeaderView.swift
 //  SideDish
 //
 //  Created by Chaewan Park on 2020/04/21.
@@ -8,6 +8,6 @@
 
 import UIKit
 
-class SideDishHeaderCell: UITableViewCell {
+class SideDishHeaderView: UITableViewHeaderFooterView {
     
 }
