@@ -124,7 +124,7 @@
                                                                 </stackView>
                                                             </subviews>
                                                         </stackView>
-                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="sdD-SG-vc3" userLabel="Badge Stack View" customClass="BadgeStackView" customModule="SideDish" customModuleProvider="target">
+                                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="sdD-SG-vc3" userLabel="Badge Stack View" customClass="BadgeStackView" customModule="SideDish" customModuleProvider="target">
                                                             <rect key="frame" x="0.0" y="78.5" width="30" height="20"/>
                                                         </stackView>
                                                     </subviews>
@@ -150,6 +150,9 @@
                                                 <constraint firstItem="N54-wX-zL9" firstAttribute="leading" secondItem="AR6-Ai-jgg" secondAttribute="trailing" constant="16" id="tj3-1M-EX8"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="badgeStackView" destination="sdD-SG-vc3" id="9a0-8h-6As"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>

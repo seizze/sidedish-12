@@ -1,0 +1,31 @@
+//
+//  BadgeLabel.swift
+//  SideDish
+//
+//  Created by Chaewan Park on 2020/04/21.
+//  Copyright © 2020 Chaewan Park. All rights reserved.
+//
+
+import UIKit
+
+class BadgeLabel: BorderedLabel {
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        setupView()
+    }
+    
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+        setupView()
+    }
+    
+    private func setupView() {
+        horizontalInset = 4
+        verticalInset = 2
+        backgroundColor = .badgePurple
+        text = "이벤트특가"
+        textColor = .white
+        font = font.withSize(12)
+    }
+}

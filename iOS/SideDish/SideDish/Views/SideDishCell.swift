@@ -10,4 +10,5 @@ import UIKit
 
 class SideDishCell: UITableViewCell {
 
+    @IBOutlet weak var badgeStackView: BadgeStackView!
 }
