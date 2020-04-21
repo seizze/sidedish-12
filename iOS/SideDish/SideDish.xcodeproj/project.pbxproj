@@ -16,6 +16,8 @@
 		C29699AE244E956600CE191F /* SideDishTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C29699AD244E956600CE191F /* SideDishTests.swift */; };
 		C2CD5E76244EB6D5000C41B8 /* BorderedLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CD5E75244EB6D5000C41B8 /* BorderedLabel.swift */; };
 		C2CD5E78244EC65A000C41B8 /* RoundImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CD5E77244EC65A000C41B8 /* RoundImageView.swift */; };
+		C2E88278244EE65800E2CECA /* SideDishCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E88277244EE65800E2CECA /* SideDishCell.swift */; };
+		C2E8827A244EE82F00E2CECA /* SideDishHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E88279244EE82F00E2CECA /* SideDishHeaderCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +44,8 @@
 		C29699AF244E956600CE191F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C2CD5E75244EB6D5000C41B8 /* BorderedLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BorderedLabel.swift; sourceTree = "<group>"; };
 		C2CD5E77244EC65A000C41B8 /* RoundImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundImageView.swift; sourceTree = "<group>"; };
+		C2E88277244EE65800E2CECA /* SideDishCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideDishCell.swift; sourceTree = "<group>"; };
+		C2E88279244EE82F00E2CECA /* SideDishHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideDishHeaderCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +113,8 @@
 			children = (
 				C2CD5E75244EB6D5000C41B8 /* BorderedLabel.swift */,
 				C2CD5E77244EC65A000C41B8 /* RoundImageView.swift */,
+				C2E88277244EE65800E2CECA /* SideDishCell.swift */,
+				C2E88279244EE82F00E2CECA /* SideDishHeaderCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -215,6 +221,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				C2CD5E78244EC65A000C41B8 /* RoundImageView.swift in Sources */,
+				C2E88278244EE65800E2CECA /* SideDishCell.swift in Sources */,
+				C2E8827A244EE82F00E2CECA /* SideDishHeaderCell.swift in Sources */,
 				C2CD5E76244EB6D5000C41B8 /* BorderedLabel.swift in Sources */,
 				C296999B244E956200CE191F /* ViewController.swift in Sources */,
 				C2969997244E956200CE191F /* AppDelegate.swift in Sources */,
