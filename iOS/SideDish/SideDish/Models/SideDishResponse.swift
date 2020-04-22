@@ -10,10 +10,10 @@ import Foundation
 
 struct SideDishResponse: Codable {
     let statusCode: Int
-    let body: [Body]
+    let body: [SideDish]
 }
 
-struct Body: Codable {
+struct SideDish: Codable {
     let detailHash: String
     let image: String
     let alt: String
