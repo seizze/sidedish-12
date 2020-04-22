@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C28003A8245012A4005D739E /* SideDishResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28003A7245012A4005D739E /* SideDishResponse.swift */; };
 		C2969997244E956200CE191F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2969996244E956200CE191F /* AppDelegate.swift */; };
 		C2969999244E956200CE191F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2969998244E956200CE191F /* SceneDelegate.swift */; };
 		C296999B244E956200CE191F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C296999A244E956200CE191F /* ViewController.swift */; };
@@ -42,6 +43,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C28003A7245012A4005D739E /* SideDishResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideDishResponse.swift; sourceTree = "<group>"; };
 		C2969993244E956200CE191F /* SideDish.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SideDish.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2969996244E956200CE191F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C2969998244E956200CE191F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -88,6 +90,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C28003A52450124A005D739E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C28003A7245012A4005D739E /* SideDishResponse.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		C28003A62450125C005D739E /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				C296999A244E956200CE191F /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 		C296998A244E956200CE191F = {
 			isa = PBXGroup;
 			children = (
@@ -113,9 +131,10 @@
 				C2CD5E74244EB68C000C41B8 /* Views */,
 				C2E8827E244F005300E2CECA /* DataSources */,
 				C2E88284244F06BE00E2CECA /* Delegates */,
+				C28003A62450125C005D739E /* Controllers */,
+				C28003A52450124A005D739E /* Models */,
 				C2969996244E956200CE191F /* AppDelegate.swift */,
 				C2969998244E956200CE191F /* SceneDelegate.swift */,
-				C296999A244E956200CE191F /* ViewController.swift */,
 				C296999C244E956200CE191F /* Main.storyboard */,
 				C296999F244E956600CE191F /* Assets.xcassets */,
 				C29699A1244E956600CE191F /* LaunchScreen.storyboard */,
@@ -303,6 +322,7 @@
 				C2969997244E956200CE191F /* AppDelegate.swift in Sources */,
 				C2D8E105244F38A000F4031F /* BadgeLabel.swift in Sources */,
 				C2969999244E956200CE191F /* SceneDelegate.swift in Sources */,
+				C28003A8245012A4005D739E /* SideDishResponse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
