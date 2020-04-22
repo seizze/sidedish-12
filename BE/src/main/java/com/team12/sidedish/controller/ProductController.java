@@ -3,6 +3,7 @@ package com.team12.sidedish.controller;
 import com.team12.sidedish.domain.Category;
 import com.team12.sidedish.domain.Dish;
 import com.team12.sidedish.dto.CategoryDto;
+import com.team12.sidedish.dto.DetailDishDto;
 import com.team12.sidedish.dto.DishDto;
 import com.team12.sidedish.dto.ResponseDto;
 import com.team12.sidedish.repository.CategoryRepository;
@@ -10,6 +11,7 @@ import com.team12.sidedish.repository.DishRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
@@ -24,8 +26,8 @@ public class ProductController {
     @Autowired
     CategoryRepository categoryRepository;
 
-    @GetMapping("/banchan/{categoryName}")
-    public ResponseDto getCategory(@PathVariable String categoryName) {
+    @GetMapping("/banchans")
+    public ResponseDto getBanchansByCategory(@RequestParam(name = "category") String categoryName) {
         Category category = categoryRepository.findByCategoryName(categoryName);
 
         List<Dish> dishes = dishRepository.findDishByCategoryId(category.getId());
@@ -51,5 +53,13 @@ public class ProductController {
 
             return ResponseDto.OK(categoryDtos);
         }
+    }
+
+    @GetMapping("/banchans/{banchanId}")
+    public ResponseDto getBanchan(@PathVariable String banchanId) {
+        Dish dish = dishRepository.findById(banchanId);
+        DetailDishDto detailDishDto = new DetailDishDto(dish);
+
+        return ResponseDto.OK(detailDishDto);
     }
 }

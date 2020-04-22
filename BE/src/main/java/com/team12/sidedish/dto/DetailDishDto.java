@@ -1,5 +1,8 @@
 package com.team12.sidedish.dto;
 
+import com.team12.sidedish.domain.Dish;
+import com.team12.sidedish.service.StringParser;
+
 import java.util.List;
 import java.util.StringJoiner;
 
@@ -16,9 +19,23 @@ public class DetailDishDto {
 
   private String delivery_fee;
 
-  private List<String> prices;
+  private String n_price;
+
+  private String s_price;
 
   private List<String> detail_section;
+
+  public DetailDishDto(Dish dish) {
+    this.top_image = dish.getTopImage();
+    this.thumb_images = StringParser.parseToArray(dish.getThumbImages());
+    this.description = dish.getDescription();
+    this.point = dish.getPoint();
+    this.delivery_fee = dish.getDeliveryFee();
+    this.delivery_info = dish.getDeliveryInfo();
+    this.n_price = dish.getN_price();
+    this.s_price = dish.getS_price();
+    this.detail_section  = StringParser.parseToArray(dish.getDetailSection());
+  }
 
   public String getTop_image() {
     return top_image;
@@ -44,8 +61,12 @@ public class DetailDishDto {
     return delivery_fee;
   }
 
-  public List<String> getPrices() {
-    return prices;
+  public String getN_price() {
+    return n_price;
+  }
+
+  public String getS_price() {
+    return s_price;
   }
 
   public List<String> getDetail_section() {
@@ -61,7 +82,8 @@ public class DetailDishDto {
             .add("point='" + point + "'")
             .add("delivery_info='" + delivery_info + "'")
             .add("delivery_fee='" + delivery_fee + "'")
-            .add("prices=" + prices)
+            .add("n_price='" + n_price + "'")
+            .add("s_price='" + s_price + "'")
             .add("detail_section=" + detail_section)
             .toString();
   }

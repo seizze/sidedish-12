@@ -41,6 +41,30 @@ public class DishRepository {
         return dishIds;
     }
 
+    public Dish findById(String dishId) {
+        String sql = "SELECT * FROM dish where id = ?";
+
+        return jdbcTemplate.queryForObject(sql, new Object[]{dishId}, (rs, rowNum) -> {
+            Dish dish = new Dish();
+            dish.setId(rs.getLong("id"));
+            dish.setImage(rs.getString("image"));
+            dish.setAlt(rs.getString("alt"));
+            dish.setDeliveryType(rs.getString("delivery_type"));
+            dish.setTitle(rs.getString("title"));
+            dish.setDescription(rs.getString("description"));
+            dish.setBadge(rs.getString("badge"));
+            dish.setTopImage(rs.getString("top_image"));
+            dish.setThumbImages(rs.getString("thumb_images"));
+            dish.setPoint(rs.getString("point"));
+            dish.setDeliveryInfo(rs.getString("delivery_info"));
+            dish.setDeliveryFee(rs.getString("delivery_fee"));
+            dish.setN_price(rs.getString("n_price"));
+            dish.setS_price(rs.getString("s_price"));
+            dish.setDetailSection(rs.getString("detail_section"));
+            return dish;
+        });
+    }
+
     //    category 하위 dish
     public List<Dish> findDishByCategoryId(Long categoryId) {
         List<Long> dishIds = getDishIds(categoryId);
@@ -68,4 +92,6 @@ public class DishRepository {
             return dish;
         }).collect(Collectors.toList());
     }
+
+
 }
