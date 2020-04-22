@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		C28003A8245012A4005D739E /* SideDishResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28003A7245012A4005D739E /* SideDishResponse.swift */; };
+		C28003AB245017DB005D739E /* Endpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28003AA245017DB005D739E /* Endpoints.swift */; };
 		C2969997244E956200CE191F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2969996244E956200CE191F /* AppDelegate.swift */; };
 		C2969999244E956200CE191F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2969998244E956200CE191F /* SceneDelegate.swift */; };
 		C296999B244E956200CE191F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C296999A244E956200CE191F /* ViewController.swift */; };
@@ -44,6 +45,7 @@
 
 /* Begin PBXFileReference section */
 		C28003A7245012A4005D739E /* SideDishResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideDishResponse.swift; sourceTree = "<group>"; };
+		C28003AA245017DB005D739E /* Endpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoints.swift; sourceTree = "<group>"; };
 		C2969993244E956200CE191F /* SideDish.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SideDish.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2969996244E956200CE191F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C2969998244E956200CE191F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -106,6 +108,14 @@
 			path = Controllers;
 			sourceTree = "<group>";
 		};
+		C28003A9245017C4005D739E /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				C28003AA245017DB005D739E /* Endpoints.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
 		C296998A244E956200CE191F = {
 			isa = PBXGroup;
 			children = (
@@ -133,6 +143,7 @@
 				C2E88284244F06BE00E2CECA /* Delegates */,
 				C28003A62450125C005D739E /* Controllers */,
 				C28003A52450124A005D739E /* Models */,
+				C28003A9245017C4005D739E /* Networking */,
 				C2969996244E956200CE191F /* AppDelegate.swift */,
 				C2969998244E956200CE191F /* SceneDelegate.swift */,
 				C296999C244E956200CE191F /* Main.storyboard */,
@@ -319,6 +330,7 @@
 				C2D8E0FF244F301100F4031F /* BadgeStackView.swift in Sources */,
 				C2CD5E76244EB6D5000C41B8 /* BorderedLabel.swift in Sources */,
 				C296999B244E956200CE191F /* ViewController.swift in Sources */,
+				C28003AB245017DB005D739E /* Endpoints.swift in Sources */,
 				C2969997244E956200CE191F /* AppDelegate.swift in Sources */,
 				C2D8E105244F38A000F4031F /* BadgeLabel.swift in Sources */,
 				C2969999244E956200CE191F /* SceneDelegate.swift in Sources */,
