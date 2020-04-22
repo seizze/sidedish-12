@@ -1,12 +1,10 @@
 package com.team12.sidedish.dto;
 
 import com.team12.sidedish.domain.Dish;
+import com.team12.sidedish.service.StringParser;
 
-import java.util.Arrays;
 import java.util.List;
 import java.util.StringJoiner;
-import java.util.regex.Pattern;
-import java.util.stream.Collectors;
 
 public class DishDto {
 
@@ -32,12 +30,12 @@ public class DishDto {
         this.id = dish.getId();
         this.image = dish.getImage();
         this.alt = dish.getAlt();
-        this.delivery_type = this.parseToArray(dish.getDeliveryType());
+        this.delivery_type = StringParser.parseToArray(dish.getDeliveryType());
         this.title = dish.getTitle();
         this.description = dish.getDescription();
         this.n_price = dish.getN_price();
         this.s_price = dish.getS_price();
-        this.badge =  this.parseToArray(dish.getBadge());
+        this.badge =  StringParser.parseToArray(dish.getBadge());
     }
 
     public Long getId() {
@@ -74,19 +72,6 @@ public class DishDto {
 
     public List<String> getBadge() {
         return badge;
-    }
-
-    private List<String> parseToArray(String str) {
-        if(str == null) {
-            return null;
-        }
-        String[] strs = str.split("\\,", -1);
-        Pattern pattern = Pattern.compile("\\[|]|\"|");
-
-        List<String> arr = Arrays.stream(strs).collect(Collectors.toList());
-        return arr.stream().map(a ->
-                pattern.matcher(a).replaceAll("").trim()
-        ).collect(Collectors.toList());
     }
 
     @Override
