@@ -22,6 +22,8 @@
 		C29699A3244E956600CE191F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C29699A1244E956600CE191F /* LaunchScreen.storyboard */; };
 		C2BBA54A2451789200E76F08 /* BanchanViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2BBA5492451789200E76F08 /* BanchanViewModel.swift */; };
 		C2BBA54C24517C1300E76F08 /* Banchan.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2BBA54B24517C1300E76F08 /* Banchan.swift */; };
+		C2BBA55024517DB400E76F08 /* CategorizedBanchanViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2BBA54F24517DB400E76F08 /* CategorizedBanchanViewModel.swift */; };
+		C2BBA5522451844B00E76F08 /* ViewModelBinding.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2BBA5512451844B00E76F08 /* ViewModelBinding.swift */; };
 		C2CD5E76244EB6D5000C41B8 /* BorderedLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CD5E75244EB6D5000C41B8 /* BorderedLabel.swift */; };
 		C2CD5E78244EC65A000C41B8 /* RoundImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CD5E77244EC65A000C41B8 /* RoundImageView.swift */; };
 		C2D8E0FF244F301100F4031F /* BadgeStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D8E0FE244F301100F4031F /* BadgeStackView.swift */; };
@@ -69,6 +71,8 @@
 		C29699A4244E956600CE191F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C2BBA5492451789200E76F08 /* BanchanViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BanchanViewModel.swift; sourceTree = "<group>"; };
 		C2BBA54B24517C1300E76F08 /* Banchan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Banchan.swift; sourceTree = "<group>"; };
+		C2BBA54F24517DB400E76F08 /* CategorizedBanchanViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategorizedBanchanViewModel.swift; sourceTree = "<group>"; };
+		C2BBA5512451844B00E76F08 /* ViewModelBinding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelBinding.swift; sourceTree = "<group>"; };
 		C2CD5E75244EB6D5000C41B8 /* BorderedLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BorderedLabel.swift; sourceTree = "<group>"; };
 		C2CD5E77244EC65A000C41B8 /* RoundImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundImageView.swift; sourceTree = "<group>"; };
 		C2D8E0FE244F301100F4031F /* BadgeStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgeStackView.swift; sourceTree = "<group>"; };
@@ -116,8 +120,8 @@
 		C28003A52450124A005D739E /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				C28003A7245012A4005D739E /* BanchanResponse.swift */,
 				C2BBA54B24517C1300E76F08 /* Banchan.swift */,
+				C28003A7245012A4005D739E /* BanchanResponse.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -192,7 +196,9 @@
 		C2BBA5482451786E00E76F08 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				C2BBA5512451844B00E76F08 /* ViewModelBinding.swift */,
 				C2BBA5492451789200E76F08 /* BanchanViewModel.swift */,
+				C2BBA54F24517DB400E76F08 /* CategorizedBanchanViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -361,9 +367,11 @@
 				C2D8E109244F3CB200F4031F /* LaunchingBadge.swift in Sources */,
 				C2E88283244F05B600E2CECA /* ReusableView.swift in Sources */,
 				C2E88286244F06D900E2CECA /* BanchanDelegate.swift in Sources */,
+				C2BBA5522451844B00E76F08 /* ViewModelBinding.swift in Sources */,
 				C2D8E10D244F3D2000F4031F /* FreeGiftBadge.swift in Sources */,
 				C28003B1245020EF005D739E /* NetworkManager.swift in Sources */,
 				C2E88281244F007500E2CECA /* BanchanDataSource.swift in Sources */,
+				C2BBA55024517DB400E76F08 /* CategorizedBanchanViewModel.swift in Sources */,
 				C2D8E10B244F3CF300F4031F /* OutOfStockBadge.swift in Sources */,
 				C2CD5E78244EC65A000C41B8 /* RoundImageView.swift in Sources */,
 				C2BBA54A2451789200E76F08 /* BanchanViewModel.swift in Sources */,

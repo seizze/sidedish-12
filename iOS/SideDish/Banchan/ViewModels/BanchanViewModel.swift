@@ -8,11 +8,6 @@
 
 import Foundation
 
-protocol ViewModelBinding {
-    associatedtype Key
-    func updateNotify(handler: @escaping (Key) -> Void)
-}
-
 class BanchanViewModel: ViewModelBinding {
     typealias Key = Banchan?
     
