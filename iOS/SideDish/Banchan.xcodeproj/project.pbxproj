@@ -20,6 +20,7 @@
 		C296999E244E956200CE191F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C296999C244E956200CE191F /* Main.storyboard */; };
 		C29699A0244E956600CE191F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C296999F244E956600CE191F /* Assets.xcassets */; };
 		C29699A3244E956600CE191F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C29699A1244E956600CE191F /* LaunchScreen.storyboard */; };
+		C2BBA54A2451789200E76F08 /* BanchanViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2BBA5492451789200E76F08 /* BanchanViewModel.swift */; };
 		C2CD5E76244EB6D5000C41B8 /* BorderedLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CD5E75244EB6D5000C41B8 /* BorderedLabel.swift */; };
 		C2CD5E78244EC65A000C41B8 /* RoundImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CD5E77244EC65A000C41B8 /* RoundImageView.swift */; };
 		C2D8E0FF244F301100F4031F /* BadgeStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D8E0FE244F301100F4031F /* BadgeStackView.swift */; };
@@ -65,6 +66,7 @@
 		C296999F244E956600CE191F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C29699A2244E956600CE191F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C29699A4244E956600CE191F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C2BBA5492451789200E76F08 /* BanchanViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BanchanViewModel.swift; sourceTree = "<group>"; };
 		C2CD5E75244EB6D5000C41B8 /* BorderedLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BorderedLabel.swift; sourceTree = "<group>"; };
 		C2CD5E77244EC65A000C41B8 /* RoundImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundImageView.swift; sourceTree = "<group>"; };
 		C2D8E0FE244F301100F4031F /* BadgeStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgeStackView.swift; sourceTree = "<group>"; };
@@ -167,6 +169,7 @@
 			children = (
 				C2E8827F244F006400E2CECA /* Utils */,
 				C2CD5E74244EB68C000C41B8 /* Views */,
+				C2BBA5482451786E00E76F08 /* ViewModels */,
 				C2E8827E244F005300E2CECA /* DataSources */,
 				C2E88284244F06BE00E2CECA /* Delegates */,
 				C28003A62450125C005D739E /* Controllers */,
@@ -181,6 +184,14 @@
 				C29699A4244E956600CE191F /* Info.plist */,
 			);
 			path = Banchan;
+			sourceTree = "<group>";
+		};
+		C2BBA5482451786E00E76F08 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				C2BBA5492451789200E76F08 /* BanchanViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 		C2CD5E74244EB68C000C41B8 /* Views */ = {
@@ -352,6 +363,7 @@
 				C2E88281244F007500E2CECA /* BanchanDataSource.swift in Sources */,
 				C2D8E10B244F3CF300F4031F /* OutOfStockBadge.swift in Sources */,
 				C2CD5E78244EC65A000C41B8 /* RoundImageView.swift in Sources */,
+				C2BBA54A2451789200E76F08 /* BanchanViewModel.swift in Sources */,
 				C28003AF245018CA005D739E /* APIRouter.swift in Sources */,
 				C2E88278244EE65800E2CECA /* BanchanCell.swift in Sources */,
 				C28003AD245018AA005D739E /* APIBuilder.swift in Sources */,
