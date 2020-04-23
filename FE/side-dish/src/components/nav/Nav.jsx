@@ -68,4 +68,38 @@ const Nav = () => {
   );
 };
 
+const useStyles = makeStyles({
+  root: {
+    display: "flex",
+    position: "relative",
+    alignItems: "center",
+    justifyContent: "space-between",
+    fontSize: "11px",
+    paddingLeft: "60px",
+    paddingRight: "73px",
+    color: "#828282",
+    borderBottom: "0.5px solid #bebebe",
+    height: "30px",
+    "& .arrow_icon": {
+      marginRight: "4px",
+    },
+    "& span": {
+      pointerEvents: "none",
+    },
+    "& .list_item": {
+      display: "",
+      alignItems: "center",
+      padding: "14px",
+      height: "10px",
+      cursor: "pointer",
+      "&:hover": {
+        color: "#1FCBC7",
+      },
+    },
+  },
+  navRightStyles: {
+    display: "flex",
+  },
+});
+
 export default Nav;
