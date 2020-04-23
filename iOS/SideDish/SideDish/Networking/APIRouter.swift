@@ -8,7 +8,7 @@
 
 import Foundation
 
-enum APIRouter: APIBuilder {
+enum MainPageAPIRouter: APIBuilder, CaseIterable {
     case main
     case soup
     case side

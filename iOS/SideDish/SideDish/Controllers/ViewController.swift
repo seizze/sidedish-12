@@ -22,5 +22,7 @@ class ViewController: UIViewController {
         tableView.dataSource = dataSource
         
         tableView.register(SideDishHeaderView.nib, forHeaderFooterViewReuseIdentifier: SideDishHeaderView.reuseIdentifier)
+        
+        SideDishUseCase.performFetching(with: NetworkManager()) { _ in }
     }
 }

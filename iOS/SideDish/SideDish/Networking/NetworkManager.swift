@@ -26,8 +26,8 @@ protocol NetworkManageable {
  
 extension NetworkManageable {
     func request<T: Decodable>(_ responseType: T.Type,
-                                       with request: URLRequest?,
-                                       completion: @escaping (Result<T, Error>) -> Void) {
+                               with request: URLRequest?,
+                               completion: @escaping (Result<T, Error>) -> Void) {
         guard let request = request else { return }
         
         URLSession(configuration: .default).dataTask(with: request) { data, response, error in
