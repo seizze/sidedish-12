@@ -5,26 +5,26 @@ DROP TABLE IF EXISTS dish_category CASCADE;
 CREATE TABLE dish
 (
     id             bigint primary key auto_increment,
-    image          varchar,
-    alt            varchar,
-    delivery_type  varchar,
-    title          varchar,
-    description    varchar,
-    badge          varchar,
-    top_image      varchar,
-    thumb_images   varchar,
-    point          varchar,
-    delivery_info  varchar,
-    delivery_fee   varchar,
-    s_price        varchar,
-    n_price        varchar,
-    detail_section varchar
+    image          text,
+    alt            varchar(512),
+    delivery_type  varchar(512),
+    title          varchar(512),
+    description    varchar(512),
+    badge          varchar(512),
+    top_image      text,
+    thumb_images   text,
+    point          varchar(512),
+    delivery_info  varchar(512),
+    delivery_fee   varchar(512),
+    s_price        varchar(512),
+    n_price        varchar(512),
+    detail_section text
 );
 
 CREATE TABLE category
 (
     id        bigint primary key auto_increment,
-    name      varchar,
+    name      varchar(20),
     parent_id bigint references category (id)
 );
 
