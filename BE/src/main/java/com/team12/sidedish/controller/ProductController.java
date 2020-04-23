@@ -9,15 +9,13 @@ import com.team12.sidedish.dto.ResponseDto;
 import com.team12.sidedish.repository.CategoryRepository;
 import com.team12.sidedish.repository.DishRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.stream.Collectors;
 
 @RestController
+@CrossOrigin(origins = "*", allowedHeaders = "*")
 public class ProductController {
 
     @Autowired
