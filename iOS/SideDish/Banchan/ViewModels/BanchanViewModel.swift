@@ -36,4 +36,3 @@ class BanchanViewModel: ViewModelBinding {
         self.changeHandler = handler
     }
 }
-
