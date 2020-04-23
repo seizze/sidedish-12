@@ -12,7 +12,7 @@ public class CategoryDto {
 
     private String name;
 
-    private List<DishDto> items = new ArrayList<>();
+    private List<DishDto> banchans = new ArrayList<>();
 
     public CategoryDto(Category category) {
         this.category_id = category.getId();
@@ -29,12 +29,12 @@ public class CategoryDto {
         return name;
     }
 
-    public List<DishDto> getItems() {
-        return items;
+    public List<DishDto> getBanchans() {
+        return banchans;
     }
 
-    public void setItems(List<DishDto> items) {
-        this.items = items;
+    public void setItems(List<DishDto> banchans) {
+        this.banchans = banchans;
     }
 
     @Override
@@ -42,7 +42,7 @@ public class CategoryDto {
         return new StringJoiner(", ", CategoryDto.class.getSimpleName() + "[", "]")
                 .add("category_id=" + category_id)
                 .add("name='" + name + "'")
-                .add("items=" + items)
+                .add("banchans=" + banchans)
                 .toString();
     }
 }
