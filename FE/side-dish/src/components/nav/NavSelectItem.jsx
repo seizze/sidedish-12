@@ -19,6 +19,7 @@ const NavSelectItem = ({ ItemInfo, onActive, active }) => {
     </div>
   );
 };
+
 const useStyles = makeStyles({
   ulStyles: {
     marginTop: "5px",
