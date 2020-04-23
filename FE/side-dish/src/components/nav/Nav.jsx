@@ -21,6 +21,14 @@ const Nav = () => {
   const [myPageActive, setMyPageActive] = useState(false);
   const [centerActive, setCenterActive] = useState(false);
 
+  const onActiveHandler = (state, setState) => {
+    if (state === false) {
+      setState(true);
+    } else if (state === true) {
+      setState(false);
+    }
+  };
+
   return <div></div>;
 };
 
