@@ -21,6 +21,8 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         configureTableView()
+        configureDataSource()
+        configureViewModel()
         configureUseCase()
     }
     
@@ -29,6 +31,28 @@ class ViewController: UIViewController {
         tableView.dataSource = dataSource
         
         tableView.register(BanchanHeaderView.nib, forHeaderFooterViewReuseIdentifier: BanchanHeaderView.reuseIdentifier)
+    }
+    
+    private func configureDataSource() {
+        dataSource.numberOfSections = { [weak self] in
+            self?.viewModel.categoryCount ?? 0
+        }
+        dataSource.numberOfRowsInSection = { [weak self] in
+            self?.viewModel.banchanCount(of: $0) ?? 0
+        }
+        dataSource.bindCell = { [weak self] cell, section, row in
+            self?.viewModel.updateBanchanNotify(section: section, row: row) { banchan in
+                guard let banchan = banchan else { return }
+                cell.titleLabel.text = banchan.title
+            }
+        }
+    }
+    
+    private func configureViewModel() {
+        viewModel.updateNotify { _ in
+            DispatchQueue.main.async { self.tableView.reloadData() }
+            print(#function)
+        }
     }
     
     private func configureUseCase() {

@@ -9,24 +9,24 @@
 import UIKit
 
 class BanchanDataSource: NSObject {
-    
+    var numberOfSections: (() -> Int)?
+    var numberOfRowsInSection: ((Int) -> Int)?
+    var bindCell: ((BanchanCell, Int, Int) -> Void)?
+    var updateCell: ((Int, Int) -> Void)?
 }
 
 extension BanchanDataSource: UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 2
+        return numberOfSections?() ?? 0
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return numberOfRowsInSection?(section) ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: BanchanCell.reuseIdentifier, for: indexPath) as? BanchanCell else { return UITableViewCell() }
-        cell.badgeStackView.addArrangedSubview(EventBadge())
-        cell.badgeStackView.addArrangedSubview(LaunchingBadge())
-        cell.badgeStackView.addArrangedSubview(OutOfStockBadge())
-        cell.badgeStackView.addArrangedSubview(FreeGiftBadge())
+        bindCell?(cell, indexPath.section, indexPath.row)
         return cell
     }
 }

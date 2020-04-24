@@ -10,5 +10,6 @@ import UIKit
 
 class BanchanCell: UITableViewCell {
 
+    @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var badgeStackView: BadgeStackView!
 }

@@ -17,6 +17,10 @@ class BanchanViewModel: ViewModelBinding {
     
     private var changeHandler: (Key) -> Void
     
+    var title: String? {
+        return banchan?.title
+    }
+    
     init(with banchan: Key, handler: @escaping (Key) -> Void = { _ in }) {
         self.changeHandler = handler
         self.banchan = banchan
@@ -29,5 +33,6 @@ class BanchanViewModel: ViewModelBinding {
     
     func updateNotify(handler: @escaping (Key) -> Void) {
         self.changeHandler = handler
+        changeHandler(banchan)
     }
 }

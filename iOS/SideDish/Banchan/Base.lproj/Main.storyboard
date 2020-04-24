@@ -110,6 +110,7 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="badgeStackView" destination="sdD-SG-vc3" id="9a0-8h-6As"/>
+                                            <outlet property="titleLabel" destination="8se-S1-hF1" id="WVz-qs-n62"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
