@@ -27,34 +27,31 @@ public class ProductController {
     @GetMapping("/banchans")
     public ResponseDto getBanchansByCategory(@RequestParam(name = "category") String categoryName) {
         Category category = categoryRepository.findByCategoryName(categoryName);
+        List<Dish> dishes = dishRepository.findByCategoryId(category.getId());
 
-        List<Dish> dishes = dishRepository.findDishByCategoryId(category.getId());
-
-//      최상위 카테고리인 경우
-        if (dishes.size() > 0) {
+//      하위 카테고리가 없는 경우
+        if (!dishes.isEmpty()) {
             CategoryDto categoryDto = new CategoryDto(category);
             List<DishDto> dishDtos = dishes.stream().map(DishDto::new).collect(Collectors.toList());
             categoryDto.setItems(dishDtos);
             return ResponseDto.OK(categoryDto);
-        } else {
-//            하위 카테고리들이 있는 경우
-            List<Category> categories = categoryRepository.findByCategoryParent(category.getId());
-            List<CategoryDto> categoryDtos = categories.stream().map(c -> {
-                CategoryDto childCategoryDtos = new CategoryDto(c);
-                List<DishDto> childCategoryDishes = dishRepository.findDishByCategoryId(c.getId())
-                        .stream()
-                        .map(DishDto::new)
-                        .collect(Collectors.toList());
-                childCategoryDtos.setItems(childCategoryDishes);
-                return childCategoryDtos;
-            }).collect(Collectors.toList());
-
-            return ResponseDto.OK(categoryDtos);
         }
+
+//      하위 카테고리가 있는 경우
+        List<Category> categories = categoryRepository.findSubCategoryByParentId(category.getId());
+        List<CategoryDto> categoryDtos = categories.stream().map(c -> {
+            CategoryDto subCategoryDtos = new CategoryDto(c);
+            List<Dish> subDishes = dishRepository.findByCategoryId(c.getId());
+            List<DishDto> subDishDtos = subDishes.stream().map(DishDto::new).collect(Collectors.toList());
+            subCategoryDtos.setItems(subDishDtos);
+            return subCategoryDtos;
+        }).collect(Collectors.toList());
+
+        return ResponseDto.OK(categoryDtos);
     }
 
     @GetMapping("/banchans/{banchanId}")
-    public ResponseDto getBanchan(@PathVariable String banchanId) {
+    public ResponseDto<DetailDishDto> getBanchan(@PathVariable String banchanId) {
         Dish dish = dishRepository.findById(banchanId);
         DetailDishDto detailDishDto = new DetailDishDto(dish);
 
