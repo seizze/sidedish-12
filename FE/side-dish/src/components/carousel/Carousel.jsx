@@ -51,6 +51,8 @@ const useStyles = makeStyles({
     justifyContent: "center",
     flexDirection: "column",
     lineHeight: "35px",
+    marginTop: "50px",
+    marginBottom: "50px",
   },
   root: {
     display: "flex",
@@ -93,7 +95,6 @@ const useStyles = makeStyles({
   titleStyles: { fontSize: "18px", color: "#999999" },
   subTitleStyles: {
     fontSize: "34px",
-    fontWeight: "bold",
     height: "50px",
     color: "#333333",
   },
