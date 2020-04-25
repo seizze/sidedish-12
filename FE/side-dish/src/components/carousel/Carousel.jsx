@@ -27,6 +27,7 @@ const Carousel = ({ lists, CarouselTitle, subTitle }) => {
           {lists.map((el) => {
             return (
               <CarouselItem
+                key={el.id}
                 title={el.title}
                 description={el.description}
                 imageUrl={el.image}
