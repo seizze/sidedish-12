@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 
 const useFetch = (setState, url) => {
   const initFetchData = async () => {
