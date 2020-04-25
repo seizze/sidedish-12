@@ -6,8 +6,8 @@ const MenuList = ({ lists }) => {
 
   return (
     <ul className={classes.ulStyles}>
-      {lists.map((el) => {
-        return <li>{el}</li>;
+      {lists.map((el, idx) => {
+        return <li key={idx}>{el}</li>;
       })}
     </ul>
   );
