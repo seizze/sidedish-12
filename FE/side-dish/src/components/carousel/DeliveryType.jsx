@@ -6,8 +6,8 @@ const DeliveryType = ({ deliveryDatas }) => {
 
   return (
     <div className={classes.deliveryTypeStyles}>
-      {deliveryDatas.map((el) => {
-        return <div>{el}</div>;
+      {deliveryDatas.map((el, idx) => {
+        return <div key={idx}>{el}</div>;
       })}
     </div>
   );
