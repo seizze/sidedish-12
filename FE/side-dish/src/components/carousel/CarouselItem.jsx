@@ -14,6 +14,7 @@ const CarouselItem = ({
   sPrice,
   deliveryType,
   badge,
+  key,
 }) => {
   const classes = useStyles();
 
@@ -27,7 +28,7 @@ const CarouselItem = ({
   };
 
   return (
-    <item onMouseEnter={mouseEnterHandler} onMouseLeave={mouseLeaveHandler}>
+    <div onMouseEnter={mouseEnterHandler} onMouseLeave={mouseLeaveHandler}>
       <div className={classes.itemStyles}>
         <div className={classes.imgStyles}>
           <img src={imageUrl} alt={altContent} />
@@ -42,7 +43,7 @@ const CarouselItem = ({
         )}
         {badge && <Badge badgeData={badge[0]} />}
       </div>
-    </item>
+    </div>
   );
 };
 
@@ -64,7 +65,6 @@ const useStyles = makeStyles({
       textOverflow: "ellipsis",
       fontSize: "20px",
       overflow: "hidden",
-      textOverflow: "ellipsis",
       whiteSpace: "nowrap",
       width: "250px",
     },
