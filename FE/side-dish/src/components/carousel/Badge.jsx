@@ -5,8 +5,8 @@ const Badge = ({ badgeData }) => {
   const classes = useStyles();
 
   return (
-    <div className={classes.boxStyles}>
-      <span>{badgeData}</span>
+    <div>
+      {badgeData && <div className={classes.boxStyles}>{badgeData}</div>}
     </div>
   );
 };
