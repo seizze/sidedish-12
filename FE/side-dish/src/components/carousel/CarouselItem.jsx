@@ -25,10 +25,21 @@ const CarouselItem = ({
   };
 
   return (
-    <item
-      onMouseEnter={mouseEnterHandler}
-      onMouseLeave={mouseLeaveHandler}
-    ></item>
+    <item onMouseEnter={mouseEnterHandler} onMouseLeave={mouseLeaveHandler}>
+      <div className={classes.itemStyles}>
+        <div className={classes.imgStyles}>
+          <img src={imageUrl} alt={altContent} />
+        </div>
+        {isShown && <DeliveryType deliveryDatas={deliveryType} />}
+        <h1>{title}</h1>
+        <h2>{description}</h2>
+        {nPrice === null ? (
+          <Price1 sPrice={sPrice} />
+        ) : (
+          <Price2 nPrice={nPrice} sPrice={sPrice} />
+        )}
+      </div>
+    </item>
   );
 };
 
