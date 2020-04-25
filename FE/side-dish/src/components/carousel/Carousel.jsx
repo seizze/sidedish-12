@@ -22,6 +22,23 @@ const Carousel = ({ lists, CarouselTitle, subTitle }) => {
     <div className={classes.defaultStyles}>
       <h1 className={classes.titleStyles}>{CarouselTitle}</h1>
       <h2 className={classes.subTitleStyles}>{subTitle}</h2>
+      <div className={classes.root}>
+        <Slider {...setting} className={classes.carouselStyles}>
+          {lists.map((el) => {
+            return (
+              <CarouselItem
+                title={el.title}
+                description={el.description}
+                imageUrl={el.image}
+                altContent={el.alt}
+                nPrice={el.n_price}
+                sPrice={el.s_price}
+                deliveryType={el.delivery_type}
+              />
+            );
+          })}
+        </Slider>
+      </div>
     </div>
   );
 };
