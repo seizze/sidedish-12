@@ -3,6 +3,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import DeliveryType from "./DeliveryType.jsx";
 import Price1 from "./price/Price1.jsx";
 import Price2 from "./price/Price2.jsx";
+import Badge from "./Badge.jsx";
 
 const CarouselItem = ({
   title,
@@ -12,6 +13,7 @@ const CarouselItem = ({
   nPrice,
   sPrice,
   deliveryType,
+  badge,
 }) => {
   const classes = useStyles();
 
@@ -38,6 +40,7 @@ const CarouselItem = ({
         ) : (
           <Price2 nPrice={nPrice} sPrice={sPrice} />
         )}
+        {badge && <Badge badgeData={badge[0]} />}
       </div>
     </item>
   );

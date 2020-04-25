@@ -34,6 +34,7 @@ const Carousel = ({ lists, CarouselTitle, subTitle }) => {
                 nPrice={el.n_price}
                 sPrice={el.s_price}
                 deliveryType={el.delivery_type}
+                badge={el.badge}
               />
             );
           })}
