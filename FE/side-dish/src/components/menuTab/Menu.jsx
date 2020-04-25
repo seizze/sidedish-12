@@ -9,8 +9,8 @@ const Menu = () => {
 
   return (
     <article className={classes.root}>
-      {menuDataList.map((item) => {
-        return <MenuItem title={item.title} list={item.list} />;
+      {menuDataList.map((item, idx) => {
+        return <MenuItem title={item.title} list={item.list} key={idx} />;
       })}
     </article>
   );
