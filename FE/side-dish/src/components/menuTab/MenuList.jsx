@@ -28,6 +28,7 @@ const useStyles = makeStyles({
     marginTop: "18px",
     width: "102px",
     lineHeight: "20px",
+    zIndex: "1",
     "& li": {
       "&:hover": {
         color: "#1FCBC7",
