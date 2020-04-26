@@ -12,7 +12,7 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
-    private var viewModel = CategorizedBanchanViewModel(with: [Int: [BanchanViewModel]]())
+    private var viewModel = CategorizedBanchanViewModel()
     private let delegate = BanchanDelegate()
     
     override func viewDidLoad() {
@@ -31,9 +31,12 @@ class ViewController: UIViewController {
     }
     
     private func configureViewModel() {
-        viewModel.updateNotify { _, _ in
-            DispatchQueue.main.async { self.tableView.reloadData() }
-            print(#function)
+        viewModel.updateNotify { change, _ in
+            if let section = change?.section {
+                self.tableView.reloadSections(IndexSet(section...section), with: .automatic)
+            } else {
+                self.tableView.reloadData()
+            }
         }
         viewModel.updateBanchanNotify { cell, banchan, data in
             guard let banchan = banchan else { return }
@@ -53,13 +56,14 @@ class ViewController: UIViewController {
         BanchanUseCase.performImageFetching(with: NetworkManager(), url: banchan.image) {
             guard let image = UIImage(data: $0) else { return }
             DispatchQueue.main.async { cell.banchanImageView.image = image }
-            
         }
     }
     
     private func configureUseCase() {
         BanchanUseCase.performFetching(with: NetworkManager()) { [weak self] index, banchans in
-            self?.viewModel.append(key: index, value: banchans.map { BanchanViewModel(with: $0) })
+            DispatchQueue.main.async {
+                self?.viewModel.append(key: index, value: banchans.map { BanchanViewModel(with: $0) })
+            }
         }
     }
 }

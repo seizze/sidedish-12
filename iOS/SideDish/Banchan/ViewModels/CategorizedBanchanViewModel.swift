@@ -8,31 +8,39 @@
 
 import UIKit
 
+struct BanchanChangeDetails {
+    let section: Int?
+    let overallData: [Int: [BanchanViewModel]]
+}
+
+extension BanchanChangeDetails {
+    init(with data: [Int: [BanchanViewModel]]) {
+        section = nil
+        overallData = data
+    }
+}
+
 class CategorizedBanchanViewModel: NSObject, ViewModelBinding {
-    typealias Key = [Int: [BanchanViewModel]]?
-    typealias Data = String
+    typealias Key = BanchanChangeDetails?
+    typealias Data = Void?
     typealias BanchanHandler = (BanchanCell, BanchanViewModel.Key, BanchanViewModel.Data) -> Void
     
-    private var categorizedBanchan: Key = nil {
-        didSet { changeHandler(categorizedBanchan, "") }
+    private var banchanChange: Key = nil {
+        didSet { changeHandler(banchanChange, nil) }
     }
     
     private var changeHandler: (Key, Data) -> Void
     
     private var banchanChangeHandler: BanchanHandler = { _, _, _ in }
     
-    var categoryCount: Int {
-        return categorizedBanchan?.count ?? 0
-    }
-    
-    init(with categorizedBanchan: Key, handler: @escaping (Key, Data) -> Void = { _, _ in }) {
+    init(with categorizedBanchan: Key = nil, handler: @escaping (Key, Data) -> Void = { _, _ in }) {
         self.changeHandler = handler
-        self.categorizedBanchan = categorizedBanchan
-        changeHandler(categorizedBanchan, "")
+        self.banchanChange = BanchanChangeDetails(with: [Int: [BanchanViewModel]]())
+        changeHandler(categorizedBanchan, nil)
     }
     
     func update(categorizedBanchan: Key) {
-        self.categorizedBanchan = categorizedBanchan
+        self.banchanChange = categorizedBanchan
     }
     
     func updateNotify(handler: @escaping (Key, Data) -> Void) {
@@ -40,15 +48,17 @@ class CategorizedBanchanViewModel: NSObject, ViewModelBinding {
     }
     
     func append(key: Int, value: [BanchanViewModel]) {
-        categorizedBanchan?[key] = value
+        guard var data = banchanChange?.overallData else { return }
+        data[key] = value
+        banchanChange = BanchanChangeDetails(section: key, overallData: data)
     }
     
     func banchan(category: Int, index: Int) -> BanchanViewModel? {
-        return categorizedBanchan?[category]?[index]
+        return banchanChange?.overallData[category]?[index]
     }
     
     func banchanCount(of category: Int) -> Int {
-        return categorizedBanchan?[category]?.count ?? 0
+        return banchanChange?.overallData[category]?.count ?? 0
     }
     
     func updateBanchanNotify(handler: @escaping BanchanHandler) {
@@ -58,7 +68,7 @@ class CategorizedBanchanViewModel: NSObject, ViewModelBinding {
 
 extension CategorizedBanchanViewModel: UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
-        return categoryCount
+        return 3
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
