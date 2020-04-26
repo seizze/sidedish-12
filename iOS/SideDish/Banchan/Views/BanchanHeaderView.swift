@@ -16,4 +16,15 @@ class BanchanHeaderView: UITableViewHeaderFooterView {
     static var nib: UINib {
         return UINib(nibName: String(describing: self), bundle: nil)
     }
+    
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+        setupView()
+    }
+    
+    private func setupView() {
+        backgroundView = UIView(frame: bounds)
+        backgroundView?.backgroundColor = UIColor.white
+        backgroundView?.alpha = 0.8
+    }
 }
