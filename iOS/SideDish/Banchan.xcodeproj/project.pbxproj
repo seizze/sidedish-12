@@ -36,7 +36,6 @@
 		C2D8E10F244F42EC00F4031F /* BanchanHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2D8E10E244F42EC00F4031F /* BanchanHeaderView.xib */; };
 		C2E88278244EE65800E2CECA /* BanchanCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E88277244EE65800E2CECA /* BanchanCell.swift */; };
 		C2E8827A244EE82F00E2CECA /* BanchanHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E88279244EE82F00E2CECA /* BanchanHeaderView.swift */; };
-		C2E88281244F007500E2CECA /* BanchanDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E88280244F007500E2CECA /* BanchanDataSource.swift */; };
 		C2E88283244F05B600E2CECA /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E88282244F05B600E2CECA /* ReusableView.swift */; };
 		C2E88286244F06D900E2CECA /* BanchanDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E88285244F06D900E2CECA /* BanchanDelegate.swift */; };
 /* End PBXBuildFile section */
@@ -85,7 +84,6 @@
 		C2D8E10E244F42EC00F4031F /* BanchanHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BanchanHeaderView.xib; sourceTree = "<group>"; };
 		C2E88277244EE65800E2CECA /* BanchanCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BanchanCell.swift; sourceTree = "<group>"; };
 		C2E88279244EE82F00E2CECA /* BanchanHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BanchanHeaderView.swift; sourceTree = "<group>"; };
-		C2E88280244F007500E2CECA /* BanchanDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BanchanDataSource.swift; sourceTree = "<group>"; };
 		C2E88282244F05B600E2CECA /* ReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableView.swift; sourceTree = "<group>"; };
 		C2E88285244F06D900E2CECA /* BanchanDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BanchanDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -177,7 +175,6 @@
 				C2E8827F244F006400E2CECA /* Utils */,
 				C2CD5E74244EB68C000C41B8 /* Views */,
 				C2BBA5482451786E00E76F08 /* ViewModels */,
-				C2E8827E244F005300E2CECA /* DataSources */,
 				C2E88284244F06BE00E2CECA /* Delegates */,
 				C28003A62450125C005D739E /* Controllers */,
 				C28003B32450323D005D739E /* UseCases */,
@@ -227,14 +224,6 @@
 				C2D8E10C244F3D2000F4031F /* FreeGiftBadge.swift */,
 			);
 			path = Badges;
-			sourceTree = "<group>";
-		};
-		C2E8827E244F005300E2CECA /* DataSources */ = {
-			isa = PBXGroup;
-			children = (
-				C2E88280244F007500E2CECA /* BanchanDataSource.swift */,
-			);
-			path = DataSources;
 			sourceTree = "<group>";
 		};
 		C2E8827F244F006400E2CECA /* Utils */ = {
@@ -370,7 +359,6 @@
 				C2BBA5522451844B00E76F08 /* ViewModelBinding.swift in Sources */,
 				C2D8E10D244F3D2000F4031F /* FreeGiftBadge.swift in Sources */,
 				C28003B1245020EF005D739E /* NetworkManager.swift in Sources */,
-				C2E88281244F007500E2CECA /* BanchanDataSource.swift in Sources */,
 				C2BBA55024517DB400E76F08 /* CategorizedBanchanViewModel.swift in Sources */,
 				C2D8E10B244F3CF300F4031F /* OutOfStockBadge.swift in Sources */,
 				C2CD5E78244EC65A000C41B8 /* RoundImageView.swift in Sources */,

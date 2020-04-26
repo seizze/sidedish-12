@@ -6,9 +6,9 @@
 //  Copyright © 2020 Chaewan Park. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
-class CategorizedBanchanViewModel: ViewModelBinding {
+class CategorizedBanchanViewModel: NSObject, ViewModelBinding {
     typealias Key = [Int: [BanchanViewModel]]?
     
     private var categorizedBanchan: Key = nil {
@@ -17,8 +17,10 @@ class CategorizedBanchanViewModel: ViewModelBinding {
     
     private var changeHandler: (Key) -> Void
     
-    var categoryCount: Int? {
-        return categorizedBanchan?.count
+    private var banchanChangeHandler: (BanchanCell, BanchanViewModel.Key) -> Void = { _, _ in }
+    
+    var categoryCount: Int {
+        return categorizedBanchan?.count ?? 0
     }
     
     init(with categorizedBanchan: Key, handler: @escaping (Key) -> Void = { _ in }) {
@@ -32,18 +34,39 @@ class CategorizedBanchanViewModel: ViewModelBinding {
     }
     
     func updateNotify(handler: @escaping (Key) -> Void) {
-        self.changeHandler = handler
+        changeHandler = handler
     }
     
     func append(key: Int, value: [BanchanViewModel]) {
         categorizedBanchan?[key] = value
     }
     
-    func banchanCount(of category: Int) -> Int? {
-        return categorizedBanchan?[category]?.count
+    func banchan(category: Int, index: Int) -> BanchanViewModel? {
+        return categorizedBanchan?[category]?[index]
     }
     
-    func updateBanchanNotify(section: Int, row: Int, handler: @escaping (BanchanViewModel.Key) -> Void) {
-        categorizedBanchan?[section]?[row].updateNotify(handler: handler)
+    func banchanCount(of category: Int) -> Int {
+        return categorizedBanchan?[category]?.count ?? 0
+    }
+    
+    func updateBanchanNotify(handler: @escaping (BanchanCell, BanchanViewModel.Key) -> Void) {
+        banchanChangeHandler = handler
+    }
+}
+
+extension CategorizedBanchanViewModel: UITableViewDataSource {
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return categoryCount
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return banchanCount(of: section)
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: BanchanCell.reuseIdentifier, for: indexPath) as? BanchanCell else { return BanchanCell() }
+        banchan(category: indexPath.section, index: indexPath.row)?
+            .updateNotify { self.banchanChangeHandler(cell, $0) }
+        return cell
     }
 }
