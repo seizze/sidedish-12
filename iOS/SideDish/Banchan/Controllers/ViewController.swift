@@ -43,6 +43,10 @@ class ViewController: UIViewController {
             cell.salePriceLabel.text = banchan.salePrice
             cell.priceStackView.spacing = CGFloat(integerLiteral: data ?? 0)
             banchan.badge?.forEach { cell.badgeStackView.addArrangedSubview($0.badgeType) }
+            BanchanUseCase.performImageFetching(with: NetworkManager(), url: banchan.image) {
+                guard let image = UIImage(data: $0) else { return }
+                cell.banchanImageView.image = image
+            }
         }
     }
     

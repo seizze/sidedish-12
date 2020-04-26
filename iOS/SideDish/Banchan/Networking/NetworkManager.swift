@@ -22,6 +22,8 @@ protocol NetworkManageable {
     func request<T: Decodable>(_ responseType: T.Type,
                                with request: URLRequest?,
                                completion: @escaping (Result<T, Error>) -> Void)
+    func requestData(with request: URLRequest?,
+                     completion: @escaping (Result<Data, Error>) -> Void)
 }
  
 extension NetworkManageable {
@@ -38,6 +40,24 @@ extension NetworkManageable {
             guard let data = data, let httpResponse = response as? HTTPURLResponse else { return }
             if httpResponse.isValid() {
                 self.decode(responseType, from: data) { completion($0) }
+            } else {
+                completion(.failure(HTTPError.notFound))
+            }
+        }.resume()
+    }
+    
+    func requestData(with request: URLRequest?,
+                     completion: @escaping (Result<Data, Error>) -> Void) {
+        guard let request = request else { return }
+        
+        URLSession(configuration: .default).dataTask(with: request) { data, response, error in
+            if let error = error {
+                completion(.failure(error))
+                return
+            }
+            guard let data = data, let httpResponse = response as? HTTPURLResponse else { return }
+            if httpResponse.isValid() {
+                completion(.success(data))
             } else {
                 completion(.failure(HTTPError.notFound))
             }

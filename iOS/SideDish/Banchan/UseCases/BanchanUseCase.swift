@@ -17,4 +17,13 @@ struct BanchanUseCase {
             }
         }
     }
+    
+    static func performImageFetching(with manager: NetworkManageable,
+                                     url: String,
+                                     completion: @escaping (Data) -> ()) {
+        guard let url = URL(string: url) else { return }
+        manager.requestData(with: URLRequest(url: url)) { result in
+            if case let .success(response) = result { completion(response) }
+        }
+    }
 }
