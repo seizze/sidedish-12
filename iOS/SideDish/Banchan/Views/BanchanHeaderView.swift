@@ -10,6 +10,9 @@ import UIKit
 
 class BanchanHeaderView: UITableViewHeaderFooterView {
     
+    @IBOutlet weak var categoryLabel: BorderedLabel!
+    @IBOutlet weak var titleLabel: UILabel!
+    
     static var nib: UINib {
         return UINib(nibName: String(describing: self), bundle: nil)
     }

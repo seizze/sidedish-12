@@ -9,12 +9,18 @@
 import UIKit
 
 class BanchanDelegate: NSObject {
-    
+    let categories = [0: "든든한 반찬", 1: "국∙찌개", 2: "밑반찬"]
+    let titles = [0: "언제 먹어도 든든한 반찬",
+                  1: "김이 모락모락 국∙찌개",
+                  2: "언제 먹어도 든든한 밑반찬"]
 }
 
 extension BanchanDelegate: UITableViewDelegate {
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        return tableView.dequeueReusableHeaderFooterView(withIdentifier: BanchanHeaderView.reuseIdentifier)
+        guard let view = tableView.dequeueReusableHeaderFooterView(withIdentifier: BanchanHeaderView.reuseIdentifier) as? BanchanHeaderView else { return UIView() }
+        view.titleLabel.text = titles[section]
+        view.categoryLabel.text = categories[section]
+        return view
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {

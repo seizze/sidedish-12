@@ -16,6 +16,7 @@ class BanchanCell: UITableViewCell {
     @IBOutlet weak var salePriceLabel: UILabel!
     @IBOutlet weak var priceStackView: UIStackView!
     @IBOutlet weak var badgeStackView: BadgeStackView!
+    @IBOutlet weak var banchanImageView: RoundImageView!
     
     override func prepareForReuse() {
         badgeStackView.arrangedSubviews.forEach { $0.removeFromSuperview() }
