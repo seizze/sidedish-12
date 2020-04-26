@@ -1,7 +1,7 @@
 package com.team12.sidedish.dto;
 
 import com.team12.sidedish.domain.Dish;
-import com.team12.sidedish.service.StringParser;
+import com.team12.sidedish.util.StringParser;
 
 import java.util.List;
 import java.util.StringJoiner;

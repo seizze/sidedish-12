@@ -1,4 +1,4 @@
-package com.team12.sidedish.service;
+package com.team12.sidedish.util;
 
 import java.util.Arrays;
 import java.util.List;
