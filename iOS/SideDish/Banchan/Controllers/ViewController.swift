@@ -31,13 +31,17 @@ class ViewController: UIViewController {
     }
     
     private func configureViewModel() {
-        viewModel.updateNotify { _ in
+        viewModel.updateNotify { _, _ in
             DispatchQueue.main.async { self.tableView.reloadData() }
             print(#function)
         }
-        viewModel.updateBanchanNotify { cell, banchan in
+        viewModel.updateBanchanNotify { cell, banchan, data in
             guard let banchan = banchan else { return }
             cell.titleLabel.text = banchan.title
+            cell.detailLabel.text = banchan.bodyDescription
+            cell.normalPriceLabel.text = banchan.nPrice
+            cell.salePriceLabel.text = banchan.salePrice
+            cell.priceStackView.spacing = CGFloat(integerLiteral: data ?? 0)
         }
     }
     

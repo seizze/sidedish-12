@@ -110,6 +110,10 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="badgeStackView" destination="sdD-SG-vc3" id="9a0-8h-6As"/>
+                                            <outlet property="detailLabel" destination="6AF-5Z-8f1" id="zYQ-pk-Qit"/>
+                                            <outlet property="normalPriceLabel" destination="yGT-K4-1mJ" id="xzi-G9-xx7"/>
+                                            <outlet property="priceStackView" destination="sRA-PH-OB0" id="fzD-7B-3Td"/>
+                                            <outlet property="salePriceLabel" destination="Cbq-Of-FYV" id="hHC-nt-GCU"/>
                                             <outlet property="titleLabel" destination="8se-S1-hF1" id="WVz-qs-n62"/>
                                         </connections>
                                     </tableViewCell>

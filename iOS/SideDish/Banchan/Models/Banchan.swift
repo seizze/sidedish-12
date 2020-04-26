@@ -39,3 +39,13 @@ enum Badge: String, Decodable {
     case event = "이벤트특가"
     case launching = "론칭특가"
 }
+
+extension Banchan {
+    var isOnSale: Bool {
+        return nPrice == nil
+    }
+    
+    var salePrice: String {
+        return sPrice.trimmingCharacters(in: ["원"])
+    }
+}
