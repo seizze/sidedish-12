@@ -37,16 +37,23 @@ class ViewController: UIViewController {
         }
         viewModel.updateBanchanNotify { cell, banchan, data in
             guard let banchan = banchan else { return }
-            cell.titleLabel.text = banchan.title
-            cell.detailLabel.text = banchan.bodyDescription
-            cell.normalPriceLabel.text = banchan.nPrice
-            cell.salePriceLabel.text = banchan.salePrice
-            cell.priceStackView.spacing = CGFloat(integerLiteral: data ?? 0)
-            banchan.badge?.forEach { cell.badgeStackView.addArrangedSubview($0.badgeType) }
-            BanchanUseCase.performImageFetching(with: NetworkManager(), url: banchan.image) {
-                guard let image = UIImage(data: $0) else { return }
-                cell.banchanImageView.image = image
-            }
+            self.bindCell(cell: cell, banchan: banchan, data: data)
+        }
+    }
+    
+    private func bindCell(cell: BanchanCell,
+                          banchan: Banchan,
+                          data: Int?) -> Void {
+        cell.titleLabel.text = banchan.title
+        cell.detailLabel.text = banchan.bodyDescription
+        cell.normalPriceLabel.text = banchan.nPrice
+        cell.salePriceLabel.text = banchan.salePrice
+        cell.priceStackView.spacing = CGFloat(integerLiteral: data ?? 0)
+        banchan.badge?.forEach { cell.badgeStackView.addArrangedSubview($0.badgeType) }
+        BanchanUseCase.performImageFetching(with: NetworkManager(), url: banchan.image) {
+            guard let image = UIImage(data: $0) else { return }
+            DispatchQueue.main.async { cell.banchanImageView.image = image }
+            
         }
     }
     
