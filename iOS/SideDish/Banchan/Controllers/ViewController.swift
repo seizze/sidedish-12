@@ -42,6 +42,7 @@ class ViewController: UIViewController {
             cell.normalPriceLabel.text = banchan.nPrice
             cell.salePriceLabel.text = banchan.salePrice
             cell.priceStackView.spacing = CGFloat(integerLiteral: data ?? 0)
+            banchan.badge?.forEach { cell.badgeStackView.addArrangedSubview($0.badgeType) }
         }
     }
     

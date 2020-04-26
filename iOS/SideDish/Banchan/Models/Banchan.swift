@@ -49,3 +49,12 @@ extension Banchan {
         return sPrice.trimmingCharacters(in: ["원"])
     }
 }
+
+extension Badge {
+    var badgeType: BadgeLabel {
+        switch self {
+        case .event: return EventBadge()
+        case .launching: return LaunchingBadge()
+        }
+    }
+}
