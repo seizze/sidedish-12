@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.view.RedirectView;
 
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletResponse;
 import javax.websocket.server.PathParam;
 
@@ -28,13 +29,21 @@ public class LoginController {
     }
 
     @GetMapping("/login")
-    public ResponseDto<String> login(@PathParam("code") String code, HttpServletResponse httpServletResponse) {
+    public RedirectView login(@PathParam("code") String code, HttpServletResponse httpServletResponse) {
         LoginToken response = loginService.getAccessToken(code);
         User responseUer = loginService.getUserInfo(response.getTokenType(), response.getAccessToken());
 
         String jws = loginService.generateJwtToken(responseUer.getUserId());
-        httpServletResponse.setHeader("Authorization", jws);
-//        토큰을 이렇게 주면 받을 수 있나??
-        return ResponseDto.OK("로그인 성공! 토큰 발급!");
+
+        // create a cookie
+        Cookie cookie = new Cookie("token", jws);
+
+        //add cookie to response
+        httpServletResponse.addCookie(cookie);
+        RedirectView redirectView = new RedirectView();
+
+        redirectView.setUrl("/");
+
+        return redirectView;
     }
 }
