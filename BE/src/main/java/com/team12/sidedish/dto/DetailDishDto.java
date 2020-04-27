@@ -7,6 +7,9 @@ import java.util.List;
 import java.util.StringJoiner;
 
 public class DetailDishDto {
+
+  private String title;
+
   private String top_image;
 
   private List<String> thumb_images;
@@ -35,6 +38,7 @@ public class DetailDishDto {
     this.n_price = dish.getN_price();
     this.s_price = dish.getS_price();
     this.detail_section  = StringParser.parseToArray(dish.getDetailSection());
+    this.title = dish.getTitle();
   }
 
   public String getTop_image() {
@@ -73,9 +77,14 @@ public class DetailDishDto {
     return detail_section;
   }
 
+  public String getTitle() {
+    return title;
+  }
+
   @Override
   public String toString() {
     return new StringJoiner(", ", DetailDishDto.class.getSimpleName() + "[", "]")
+            .add("title='" + title + "'")
             .add("top_image='" + top_image + "'")
             .add("thumb_images=" + thumb_images)
             .add("description='" + description + "'")
