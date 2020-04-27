@@ -5,13 +5,18 @@ const Badge = ({ badgeData }) => {
   const classes = useStyles();
 
   return (
-    <div>
-      {badgeData && <div className={classes.boxStyles}>{badgeData}</div>}
+    <div className={classes.root}>
+      {badgeData.map((el) => {
+        return <div className={classes.boxStyles}>{el.badge_name}</div>;
+      })}
     </div>
   );
 };
 
 const useStyles = makeStyles({
+  root: {
+    display: "flex",
+  },
   boxStyles: {
     margin: "10px",
     display: "flex",

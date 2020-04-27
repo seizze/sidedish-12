@@ -47,7 +47,7 @@ const CarouselItem = ({
         ) : (
           <Price2 nPrice={nPrice} sPrice={sPrice} />
         )}
-        {badge && <Badge badgeData={badge[0]} />}
+        {badge && <Badge badgeData={badge} />}
         <div className={classes.modalTest}></div>
       </div>
     </div>
