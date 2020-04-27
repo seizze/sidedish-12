@@ -1,0 +1,36 @@
+plugins {
+	id 'org.springframework.boot' version '2.2.6.RELEASE'
+	id 'io.spring.dependency-management' version '1.0.9.RELEASE'
+	id 'java'
+	id 'war'
+}
+
+group = 'com.team-12'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '1.8'
+
+bootWar {
+	archiveFileName = "ROOT.war"	// 해당하는 이름으로 war 생성
+}
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-data-jdbc'
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	runtimeOnly group: 'com.h2database', name: 'h2', version: '1.4.197'
+	compile group: 'mysql', name: 'mysql-connector-java', version: '8.0.11'
+	testImplementation('org.springframework.boot:spring-boot-starter-test') {
+		exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
+	}
+	providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat'
+	compile 'io.jsonwebtoken:jjwt-api:0.11.1'
+	runtime 'io.jsonwebtoken:jjwt-impl:0.11.1',
+			'io.jsonwebtoken:jjwt-jackson:0.11.1'
+}
+
+test {
+	useJUnitPlatform()
+}
