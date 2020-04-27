@@ -16,12 +16,16 @@ const Carousel = ({ lists, CarouselTitle, subTitle }) => {
   const classes = useStyles();
 
   const [modalData, setModalData] = useState({
+    title: null,
     top_image: null,
     point: null,
     delivery_info: null,
     delivery_fee: null,
     s_price: null,
+    n_price: null,
     description: null,
+    thumb_images: [],
+    detail_section: [],
   });
   const [modalOpen, setModalOpen] = useState(false);
 
@@ -88,12 +92,16 @@ const Carousel = ({ lists, CarouselTitle, subTitle }) => {
         <Fade in={modalOpen}>
           <div className={classes.paper}>
             <ModalPage
+              title={modalData.title}
               topImage={modalData.top_image}
               point={modalData.point}
               deliveryInfo={modalData.delivery_info}
               deliveryFee={modalData.delivery_fee}
               sPrice={modalData.s_price}
+              nPrice={modalData.n_pirce}
               description={modalData.description}
+              thumbImages={modalData.thumb_images}
+              detailSection={modalData.detail_section}
             />
           </div>
         </Fade>
