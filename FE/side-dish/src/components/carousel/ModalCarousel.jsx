@@ -9,7 +9,7 @@ const useStyles = makeStyles({
     "& img": {
       width: "100px",
       height: "100px",
-      border: "1px solid #000000",
+      border: "3px solid #ccc",
     },
   },
 });
