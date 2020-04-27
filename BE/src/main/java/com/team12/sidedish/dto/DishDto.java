@@ -1,6 +1,7 @@
 package com.team12.sidedish.dto;
 
 import com.team12.sidedish.domain.Dish;
+import com.team12.sidedish.util.BadgeParser;
 import com.team12.sidedish.util.StringParser;
 
 import java.util.List;
@@ -24,7 +25,7 @@ public class DishDto {
 
     private String s_price;
 
-    private List<String> badge;
+    private List<Badge> badge;
 
     public DishDto(Dish dish) {
         this.id = dish.getId();
@@ -35,7 +36,7 @@ public class DishDto {
         this.description = dish.getDescription();
         this.n_price = dish.getN_price();
         this.s_price = dish.getS_price();
-        this.badge =  StringParser.parseToArray(dish.getBadge());
+        this.badge = BadgeParser.parse( StringParser.parseToArray(dish.getBadge()));
     }
 
     public Long getId() {
@@ -70,7 +71,7 @@ public class DishDto {
         return s_price;
     }
 
-    public List<String> getBadge() {
+    public List<Badge> getBadge() {
         return badge;
     }
 
