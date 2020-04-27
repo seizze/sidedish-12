@@ -14,7 +14,8 @@ const CarouselItem = ({
   sPrice,
   deliveryType,
   badge,
-  key,
+  itemHashData,
+  modalClickHandler,
 }) => {
   const classes = useStyles();
 
@@ -28,7 +29,12 @@ const CarouselItem = ({
   };
 
   return (
-    <div onMouseEnter={mouseEnterHandler} onMouseLeave={mouseLeaveHandler}>
+    <div
+      onClick={modalClickHandler}
+      data-hash={itemHashData}
+      onMouseEnter={mouseEnterHandler}
+      onMouseLeave={mouseLeaveHandler}
+    >
       <div className={classes.itemStyles}>
         <div className={classes.imgStyles}>
           <img src={imageUrl} alt={altContent} />
@@ -42,18 +48,20 @@ const CarouselItem = ({
           <Price2 nPrice={nPrice} sPrice={sPrice} />
         )}
         {badge && <Badge badgeData={badge[0]} />}
+        <div className={classes.modalTest}></div>
       </div>
     </div>
   );
 };
 
-const useStyles = makeStyles({
+const useStyles = makeStyles((theme) => ({
   itemStyles: {
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
     flexDirection: "column",
     lineHeight: "40px",
+    pointerEvents: "none",
     "& h1": {
       overflow: "hidden",
       textOverflow: "ellipsis",
@@ -70,13 +78,12 @@ const useStyles = makeStyles({
     },
   },
   imgStyles: {
-    position: "relative",
     "& img": {
       borderRadius: "50%",
       width: "300px",
       height: "300px",
     },
   },
-});
+}));
 
 export default CarouselItem;
