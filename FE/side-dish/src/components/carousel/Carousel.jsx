@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
@@ -6,8 +6,24 @@ import "slick-carousel/slick/slick-theme.css";
 
 import CarouselItem from "./CarouselItem.jsx";
 
+import Modal from "@material-ui/core/Modal";
+import Backdrop from "@material-ui/core/Backdrop";
+import Fade from "@material-ui/core/Fade";
+
+import ModalPage from "./ModalPage.jsx";
+
 const Carousel = ({ lists, CarouselTitle, subTitle }) => {
   const classes = useStyles();
+
+  const [modalData, setModalData] = useState({
+    top_image: null,
+    point: null,
+    delivery_info: null,
+    delivery_fee: null,
+    s_price: null,
+    description: null,
+  });
+  const [modalOpen, setModalOpen] = useState(false);
 
   const setting = {
     dots: true,
@@ -16,6 +32,21 @@ const Carousel = ({ lists, CarouselTitle, subTitle }) => {
     slidesToShow: 4,
     slidesToScroll: 4,
     arrows: true,
+  };
+
+  const modalOpenHandler = async (e) => {
+    const hashData = e.target.dataset.hash;
+    const response = await fetch(
+      `http://54.180.50.220:8080/banchans/${hashData}`
+    );
+
+    const getData = await response.json();
+    setModalData(getData.data);
+    setModalOpen(true);
+  };
+
+  const modalCloseHandler = () => {
+    setModalOpen(false);
   };
 
   return (
@@ -27,7 +58,7 @@ const Carousel = ({ lists, CarouselTitle, subTitle }) => {
           {lists.map((el) => {
             return (
               <CarouselItem
-                key={el.id}
+                itemHashData={el.id}
                 title={el.title}
                 description={el.description}
                 imageUrl={el.image}
@@ -36,16 +67,42 @@ const Carousel = ({ lists, CarouselTitle, subTitle }) => {
                 sPrice={el.s_price}
                 deliveryType={el.delivery_type}
                 badge={el.badge}
+                modalClickHandler={modalOpenHandler}
               />
             );
           })}
         </Slider>
       </div>
+      <Modal
+        aria-labelledby="transition-modal-title"
+        aria-describedby="transition-modal-description"
+        className={classes.modal}
+        onClose={modalCloseHandler}
+        open={modalOpen}
+        closeAfterTransition
+        BackdropComponent={Backdrop}
+        BackdropProps={{
+          timeout: 500,
+        }}
+      >
+        <Fade in={modalOpen}>
+          <div className={classes.paper}>
+            <ModalPage
+              topImage={modalData.top_image}
+              point={modalData.point}
+              deliveryInfo={modalData.delivery_info}
+              deliveryFee={modalData.delivery_fee}
+              sPrice={modalData.s_price}
+              description={modalData.description}
+            />
+          </div>
+        </Fade>
+      </Modal>
     </div>
   );
 };
 
-const useStyles = makeStyles({
+const useStyles = makeStyles((theme) => ({
   defaultStyles: {
     display: "flex",
     alignItems: "center",
@@ -99,6 +156,22 @@ const useStyles = makeStyles({
     height: "50px",
     color: "#333333",
   },
-});
+  modal: {
+    zIndex: "1",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  paper: {
+    position: "fixed",
+    backgroundColor: theme.palette.background.paper,
+    border: "2px solid #000",
+    boxShadow: theme.shadows[5],
+    padding: theme.spacing(2, 4, 3),
+    width: "1000px",
+    height: "600px",
+    padding: "0px",
+  },
+}));
 
 export default Carousel;
