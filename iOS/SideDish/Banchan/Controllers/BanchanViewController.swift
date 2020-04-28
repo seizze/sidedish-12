@@ -29,6 +29,15 @@ class BanchanViewController: UIViewController {
         navigationController?.setNavigationBarHidden(true, animated: false)
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let vc = segue.destination as? DetailViewController else { return }
+        
+        BanchanDetailUseCase.performFetching(with: NetworkManager(), banchanID: 27) { _ in
+            
+        }
+        
+    }
+    
     private func configureTableView() {
         tableView.register(BanchanHeaderView.nib, forHeaderFooterViewReuseIdentifier: BanchanHeaderView.reuseIdentifier)
         tableView.delegate = delegate

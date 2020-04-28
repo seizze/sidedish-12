@@ -10,7 +10,7 @@ import Foundation
 
 struct BanchanUseCase {
     static func performFetching(with manager: NetworkManageable,
-                                completion: @escaping (Int, [Banchan]) -> ()) {
+                                completion: @escaping (Int, [Banchan]) -> Void) {
         MainPageAPIRouter.allCases.enumerated().forEach { index, router in
             manager.request(BanchanResponse.self, with: router.urlRequest()) { result in
                 if case let .success(response) = result { completion(index, response.data.banchans) }
