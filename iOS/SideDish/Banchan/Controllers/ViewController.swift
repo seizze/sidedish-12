@@ -12,10 +12,8 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
-    private var viewModel = CategorizedBanchanViewModel()
+    private let viewModel = CategorizedBanchanViewModel()
     private let delegate = BanchanDelegate()
-    
-    private let group = DispatchGroup()
     private let queue = DispatchQueue(label: "networking")
     
     override func viewDidLoad() {
@@ -34,22 +32,19 @@ class ViewController: UIViewController {
     
     private func configureViewModel() {
         viewModel.updateNotify { change in
-            DispatchQueue.main.async {
+            DispatchQueue.main.sync {
                 if let section = change?.section {
                     self.tableView.reloadSections(IndexSet(section...section), with: .automatic)
                 } else {
                     self.tableView.reloadData()
                 }
-                self.group.leave()
             }
         }
     }
     
     private func configureUseCase() {
         BanchanUseCase.performFetching(with: NetworkManager()) { index, banchans in
-            self.queue.async {
-                self.group.wait()
-                self.group.enter()
+            self.queue.sync {
                 self.viewModel.append(key: index, value: banchans)
             }
         }
