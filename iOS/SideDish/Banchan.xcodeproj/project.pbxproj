@@ -14,6 +14,8 @@
 		C2764D9E245899CB00E9018A /* Line.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2764D9D245899CB00E9018A /* Line.swift */; };
 		C2764DA02458AED300E9018A /* ImageCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2764D9F2458AED300E9018A /* ImageCollectionView.swift */; };
 		C2764DA22458AFAE00E9018A /* DescriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2764DA12458AFAE00E9018A /* DescriptionView.swift */; };
+		C2764DA42458B1A900E9018A /* BanchanDetailResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2764DA32458B1A900E9018A /* BanchanDetailResponse.swift */; };
+		C2764DA62458B2D300E9018A /* BanchanDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2764DA52458B2D300E9018A /* BanchanDetail.swift */; };
 		C28003A8245012A4005D739E /* BanchanResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28003A7245012A4005D739E /* BanchanResponse.swift */; };
 		C28003AB245017DB005D739E /* Endpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28003AA245017DB005D739E /* Endpoints.swift */; };
 		C28003AD245018AA005D739E /* APIBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28003AC245018AA005D739E /* APIBuilder.swift */; };
@@ -60,6 +62,8 @@
 		C2764D9D245899CB00E9018A /* Line.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Line.swift; sourceTree = "<group>"; };
 		C2764D9F2458AED300E9018A /* ImageCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionView.swift; sourceTree = "<group>"; };
 		C2764DA12458AFAE00E9018A /* DescriptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionView.swift; sourceTree = "<group>"; };
+		C2764DA32458B1A900E9018A /* BanchanDetailResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BanchanDetailResponse.swift; sourceTree = "<group>"; };
+		C2764DA52458B2D300E9018A /* BanchanDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BanchanDetail.swift; sourceTree = "<group>"; };
 		C28003A7245012A4005D739E /* BanchanResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BanchanResponse.swift; sourceTree = "<group>"; };
 		C28003AA245017DB005D739E /* Endpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoints.swift; sourceTree = "<group>"; };
 		C28003AC245018AA005D739E /* APIBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIBuilder.swift; sourceTree = "<group>"; };
@@ -120,6 +124,8 @@
 			children = (
 				C2BBA54B24517C1300E76F08 /* Banchan.swift */,
 				C28003A7245012A4005D739E /* BanchanResponse.swift */,
+				C2764DA52458B2D300E9018A /* BanchanDetail.swift */,
+				C2764DA32458B1A900E9018A /* BanchanDetailResponse.swift */,
 				C2764D9724581C7E00E9018A /* DefaultLocation.swift */,
 			);
 			path = Models;
@@ -353,6 +359,7 @@
 				C2BBA5522451844B00E76F08 /* ViewModelBinding.swift in Sources */,
 				C28003B1245020EF005D739E /* NetworkManager.swift in Sources */,
 				C2BBA55024517DB400E76F08 /* CategorizedBanchanViewModel.swift in Sources */,
+				C2764DA62458B2D300E9018A /* BanchanDetail.swift in Sources */,
 				C2CD5E78244EC65A000C41B8 /* RoundImageView.swift in Sources */,
 				C28003AF245018CA005D739E /* APIRouter.swift in Sources */,
 				C2E88278244EE65800E2CECA /* BanchanCell.swift in Sources */,
@@ -365,6 +372,7 @@
 				C2CD5E76244EB6D5000C41B8 /* BorderedLabel.swift in Sources */,
 				C2764D9E245899CB00E9018A /* Line.swift in Sources */,
 				C28003AB245017DB005D739E /* Endpoints.swift in Sources */,
+				C2764DA42458B1A900E9018A /* BanchanDetailResponse.swift in Sources */,
 				C2969997244E956200CE191F /* AppDelegate.swift in Sources */,
 				C2D8E105244F38A000F4031F /* BadgeLabel.swift in Sources */,
 				C2764D9824581C7E00E9018A /* DefaultLocation.swift in Sources */,
