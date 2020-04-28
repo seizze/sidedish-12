@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		C22EE1F22451700B0046E27B /* BanchanTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C22EE1F12451700B0046E27B /* BanchanTests.swift */; };
+		C2764D9824581C7E00E9018A /* DefaultLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2764D9724581C7E00E9018A /* DefaultLocation.swift */; };
 		C28003A8245012A4005D739E /* BanchanResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28003A7245012A4005D739E /* BanchanResponse.swift */; };
 		C28003AB245017DB005D739E /* Endpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28003AA245017DB005D739E /* Endpoints.swift */; };
 		C28003AD245018AA005D739E /* APIBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28003AC245018AA005D739E /* APIBuilder.swift */; };
@@ -49,6 +50,7 @@
 		C22EE1EF2451700B0046E27B /* BanchanTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BanchanTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C22EE1F12451700B0046E27B /* BanchanTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BanchanTests.swift; sourceTree = "<group>"; };
 		C22EE1F32451700B0046E27B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C2764D9724581C7E00E9018A /* DefaultLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultLocation.swift; sourceTree = "<group>"; };
 		C28003A7245012A4005D739E /* BanchanResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BanchanResponse.swift; sourceTree = "<group>"; };
 		C28003AA245017DB005D739E /* Endpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoints.swift; sourceTree = "<group>"; };
 		C28003AC245018AA005D739E /* APIBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIBuilder.swift; sourceTree = "<group>"; };
@@ -110,6 +112,7 @@
 			children = (
 				C2BBA54B24517C1300E76F08 /* Banchan.swift */,
 				C28003A7245012A4005D739E /* BanchanResponse.swift */,
+				C2764D9724581C7E00E9018A /* DefaultLocation.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -348,6 +351,7 @@
 				C28003AB245017DB005D739E /* Endpoints.swift in Sources */,
 				C2969997244E956200CE191F /* AppDelegate.swift in Sources */,
 				C2D8E105244F38A000F4031F /* BadgeLabel.swift in Sources */,
+				C2764D9824581C7E00E9018A /* DefaultLocation.swift in Sources */,
 				C2969999244E956200CE191F /* SceneDelegate.swift in Sources */,
 				C28003A8245012A4005D739E /* BanchanResponse.swift in Sources */,
 				C2BBA54C24517C1300E76F08 /* Banchan.swift in Sources */,
