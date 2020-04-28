@@ -20,10 +20,20 @@ Related issues: [#8][issue8] and [#13][issue13]
 ![result1](result1.png)
 
 
+#### 피드백을 통해 개선한 내용
 
+* 뷰모델 업데이트 작업을 시리얼 큐에 넣고, 뷰 업데이트를 기다렸다가, 뷰 업데이트가 완료되면 뷰모델을 업데이트하도록 개선
+* 셀 뷰모델 바인딩 삭제하고, 데이터소스에서 셀을 그리도록 개선
+* Mock API가 아닌 실제 서버로 연결
+* 배지 정보를 서버에서 보내준대로 표시
+* `downloadTask`를 이용하여 이미지 캐싱 구현
+
+Related issues: [#44][issue44]
 
 
 [issue8]: https://github.com/codesquad-member-2020/sidedish-12/issues/8
 [issue13]: https://github.com/codesquad-member-2020/sidedish-12/issues/13
+[issue44]: https://github.com/codesquad-member-2020/sidedish-12/issues/44
+
 
 
