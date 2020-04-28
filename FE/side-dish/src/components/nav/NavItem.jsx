@@ -12,8 +12,6 @@ const NavItem = ({ title }) => {
 
 const useStyles = makeStyles({
   itemStyles: {
-    display: "",
-    alignItems: "center",
     padding: "14px",
     height: "10px",
     cursor: "pointer",

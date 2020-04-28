@@ -6,7 +6,7 @@ import Carousel from "./components/carousel/Carousel";
 
 import "./styles/reset.css";
 
-import useFetch from "./components/fetch/useFetch.jsx";
+import useFetch from "./components/util/useFetch.jsx";
 
 const App = () => {
   const [carouselMain, setCarouselMain] = useState({ data: { banchans: [] } });
