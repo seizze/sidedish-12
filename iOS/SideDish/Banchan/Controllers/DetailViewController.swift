@@ -14,14 +14,22 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var descriptionView: DescriptionView!
     @IBOutlet weak var detailView: ImageCollectionView!
     
-    var banchanDetail: BanchanDetail?
+    var viewModel = BanchanDetailViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        configureViewModel()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(false, animated: true)
+    }
+    
+    private func configureViewModel() {
+        viewModel.updateNotify { detail in
+            print(detail)
+        }
     }
 }

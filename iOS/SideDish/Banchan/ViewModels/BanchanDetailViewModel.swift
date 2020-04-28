@@ -17,7 +17,7 @@ class BanchanDetailViewModel: ViewModelBinding {
     
     private var changeHandler: (Key) -> Void
     
-    init(with banchanDetail: Key, handler: @escaping (Key) -> Void = { _ in }) {
+    init(with banchanDetail: Key = nil, handler: @escaping (Key) -> Void = { _ in }) {
         self.changeHandler = handler
         self.banchanDetail = banchanDetail
         changeHandler(banchanDetail)
