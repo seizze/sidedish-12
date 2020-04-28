@@ -147,7 +147,48 @@
                     <view key="view" contentMode="scaleToFill" id="jIb-De-k6Y">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Og-1H-nJo">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="quN-wQ-KCU">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1000"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lfr-B2-qMB">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="500"/>
+                                                <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="500" id="PXI-dk-27C"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rah-HD-0Yl">
+                                                <rect key="frame" x="0.0" y="500" width="414" height="500"/>
+                                                <color key="backgroundColor" systemColor="systemBrownColor" red="0.63529411759999999" green="0.51764705879999995" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="500" id="jg0-rD-5UG"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="quN-wQ-KCU" firstAttribute="leading" secondItem="sdV-XT-wet" secondAttribute="leading" id="b5R-aK-OJI"/>
+                                    <constraint firstItem="quN-wQ-KCU" firstAttribute="bottom" secondItem="sdV-XT-wet" secondAttribute="bottom" id="h2n-St-Vda"/>
+                                    <constraint firstItem="quN-wQ-KCU" firstAttribute="trailing" secondItem="sdV-XT-wet" secondAttribute="trailing" id="lEn-0q-yWb"/>
+                                    <constraint firstItem="quN-wQ-KCU" firstAttribute="width" secondItem="Oax-p7-QBT" secondAttribute="width" id="mxx-i9-WJy"/>
+                                    <constraint firstItem="sdV-XT-wet" firstAttribute="top" secondItem="quN-wQ-KCU" secondAttribute="top" id="oIn-cv-W0w"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="sdV-XT-wet"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="Oax-p7-QBT"/>
+                            </scrollView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Bbm-0D-Hvf" firstAttribute="trailing" secondItem="7Og-1H-nJo" secondAttribute="trailing" id="1Bd-6z-LxL"/>
+                            <constraint firstItem="Bbm-0D-Hvf" firstAttribute="bottom" secondItem="7Og-1H-nJo" secondAttribute="bottom" id="NOM-Lk-zuP"/>
+                            <constraint firstItem="7Og-1H-nJo" firstAttribute="leading" secondItem="Bbm-0D-Hvf" secondAttribute="leading" id="bbv-Eg-xJj"/>
+                            <constraint firstItem="7Og-1H-nJo" firstAttribute="top" secondItem="Bbm-0D-Hvf" secondAttribute="top" id="pVS-5d-hAf"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Bbm-0D-Hvf"/>
                     </view>
                     <navigationItem key="navigationItem" id="qdA-6T-vsn"/>
