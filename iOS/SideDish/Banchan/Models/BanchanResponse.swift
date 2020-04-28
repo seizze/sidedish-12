@@ -9,6 +9,9 @@
 import Foundation
 
 struct BanchanResponse: Decodable {
-    let statusCode: Int
-    let body: [Banchan]
+    let data: ResponseContents
+}
+
+struct ResponseContents: Decodable {
+    let banchans: [Banchan]
 }

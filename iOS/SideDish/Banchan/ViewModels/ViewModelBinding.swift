@@ -10,6 +10,5 @@ import Foundation
 
 protocol ViewModelBinding {
     associatedtype Key
-    associatedtype Data
-    func updateNotify(handler: @escaping (Key, Data) -> Void)
+    func updateNotify(handler: @escaping (Key) -> Void)
 }

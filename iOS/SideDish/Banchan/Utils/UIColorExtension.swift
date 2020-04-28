@@ -9,8 +9,18 @@
 import UIKit
 
 extension UIColor {
-    static let badgeDarkGray = UIColor(named: "Badge Dark Gray")!
-    static let badgePurple = UIColor(named: "Badge Purple")!
-    static let badgeYellow = UIColor(named: "Badge Yellow")!
     static let pointMint = UIColor(named: "Point Mint")!
+}
+
+extension UIColor {
+    convenience init(red: Int, green: Int, blue: Int) {
+        self.init(red: CGFloat(red) / 255.0,
+                  green: CGFloat(green) / 255.0,
+                  blue: CGFloat(blue) / 255.0,
+                  alpha: 1.0)
+    }
+    
+    convenience init(inHex hexValue: Int) {
+        self.init(red:(hexValue >> 16) & 0xff, green:(hexValue >> 8) & 0xff, blue:hexValue & 0xff)
+    }
 }
