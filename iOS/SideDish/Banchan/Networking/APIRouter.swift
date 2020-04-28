@@ -21,3 +21,13 @@ enum MainPageAPIRouter: String, APIBuilder, CaseIterable {
         return "category=\(rawValue)"
     }
 }
+
+enum DetailPageAPIRouter: APIBuilder {
+    case detail(banchanID: Int)
+    
+    var path: String {
+        switch self {
+        case let .detail(id): return Endpoints.baseURL + "/\(id)"
+        }
+    }
+}
