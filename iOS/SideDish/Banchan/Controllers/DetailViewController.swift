@@ -9,7 +9,11 @@
 import UIKit
 
 class DetailViewController: UIViewController {
-
+    
+    @IBOutlet weak var pagingView: ImageCollectionView!
+    @IBOutlet weak var descriptionView: DescriptionView!
+    @IBOutlet weak var detailView: ImageCollectionView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }

@@ -157,20 +157,8 @@
                                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HO2-bf-YFa">
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="256"/>
                                                 <subviews>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZjG-WL-ibj">
-                                                        <rect key="frame" x="0.0" y="0.0" width="828" height="256"/>
-                                                        <subviews>
-                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gdR-DM-8R6">
-                                                                <rect key="frame" x="0.0" y="0.0" width="414" height="256"/>
-                                                                <color key="backgroundColor" red="0.54582158449999996" green="0.68377707720000003" blue="0.38685617020000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                                <color key="tintColor" red="0.54582158449999996" green="0.68377707720000003" blue="0.38685617020000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                            </view>
-                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UyS-sW-0zK">
-                                                                <rect key="frame" x="414" y="0.0" width="414" height="256"/>
-                                                                <color key="backgroundColor" red="1" green="0.49327188729999999" blue="0.47399842739999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                <color key="tintColor" red="1" green="0.49327188729999999" blue="0.47399842739999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                            </view>
-                                                        </subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZjG-WL-ibj" customClass="ImageCollectionView" customModule="Banchan" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="0.0" height="256"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" priority="999" id="OSL-lZ-MKE"/>
                                                         </constraints>
@@ -180,16 +168,14 @@
                                                     <constraint firstItem="ZjG-WL-ibj" firstAttribute="trailing" secondItem="aWl-SU-R1W" secondAttribute="trailing" id="4yH-qJ-tc8"/>
                                                     <constraint firstAttribute="height" secondItem="HO2-bf-YFa" secondAttribute="width" multiplier="1:1.618" id="Kgy-ce-GGn"/>
                                                     <constraint firstItem="ZjG-WL-ibj" firstAttribute="bottom" secondItem="aWl-SU-R1W" secondAttribute="bottom" id="NRF-sw-t9Y"/>
-                                                    <constraint firstItem="UyS-sW-0zK" firstAttribute="width" secondItem="HO2-bf-YFa" secondAttribute="width" id="bwS-h4-d4H"/>
                                                     <constraint firstItem="ZjG-WL-ibj" firstAttribute="leading" secondItem="aWl-SU-R1W" secondAttribute="leading" id="oRn-IP-x8H"/>
                                                     <constraint firstItem="ZjG-WL-ibj" firstAttribute="top" secondItem="aWl-SU-R1W" secondAttribute="top" id="pAU-oa-nIx"/>
                                                     <constraint firstItem="ZjG-WL-ibj" firstAttribute="height" secondItem="nX5-AW-uUp" secondAttribute="height" id="paD-SN-zBv"/>
-                                                    <constraint firstItem="gdR-DM-8R6" firstAttribute="width" secondItem="HO2-bf-YFa" secondAttribute="width" id="qv0-7A-6FX"/>
                                                 </constraints>
                                                 <viewLayoutGuide key="contentLayoutGuide" id="aWl-SU-R1W"/>
                                                 <viewLayoutGuide key="frameLayoutGuide" id="nX5-AW-uUp"/>
                                             </scrollView>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lfr-B2-qMB" userLabel="Product Description View">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lfr-B2-qMB" userLabel="Product Description View" customClass="DescriptionView" customModule="Banchan" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="256" width="414" height="192"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="jHd-Vm-rbh" userLabel="Product Description Stack View">
@@ -333,7 +319,7 @@
                                                     <constraint firstAttribute="trailing" secondItem="jHd-Vm-rbh" secondAttribute="trailing" constant="20" id="tkp-JS-UgV"/>
                                                 </constraints>
                                             </view>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="7tp-EH-o5r" userLabel="Detail Image Stack View">
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="7tp-EH-o5r" userLabel="Detail Image Stack View" customClass="ImageCollectionView" customModule="Banchan" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="448" width="414" height="0.0"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" priority="999" id="sTa-RL-Hla"/>
@@ -377,6 +363,11 @@
                         <viewLayoutGuide key="safeArea" id="Bbm-0D-Hvf"/>
                     </view>
                     <navigationItem key="navigationItem" id="qdA-6T-vsn"/>
+                    <connections>
+                        <outlet property="descriptionView" destination="lfr-B2-qMB" id="qvN-w7-eNo"/>
+                        <outlet property="detailView" destination="7tp-EH-o5r" id="AjL-1G-o48"/>
+                        <outlet property="pagingView" destination="ZjG-WL-ibj" id="tf0-5W-zWX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fgK-k0-9F3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
