@@ -8,6 +8,8 @@ import {
   customerCenterItems,
 } from "./constant/navConstants.js";
 
+import { getCookie, deleteCookie } from "../util/cookie.js";
+
 const Nav = () => {
   const classes = useStyles();
 
@@ -20,6 +22,15 @@ const Nav = () => {
   const [appActive, setAppActive] = useState(false);
   const [myPageActive, setMyPageActive] = useState(false);
   const [centerActive, setCenterActive] = useState(false);
+
+  const judgeToken = getCookie("abc") === undefined ? "로그인" : "로그아웃";
+
+  const [userAccess] = useState(judgeToken);
+
+  const logOutClickHandler = () => {
+    deleteCookie("abc");
+    window.location.reload();
+  };
 
   const onActiveHandler = (state, setState) => {
     if (state === false) {
@@ -42,7 +53,19 @@ const Nav = () => {
       </div>
 
       <div className={classes.navRightStyles}>
-        <NavItem title="로그인" />
+        <div className={classes.loginStyles} name="item">
+          {userAccess === "로그인" ? (
+            <a href="http://54.180.50.220:8080/githubLogin">{userAccess}</a>
+          ) : (
+            <div
+              onClick={() => {
+                logOutClickHandler();
+              }}
+            >
+              {userAccess}
+            </div>
+          )}
+        </div>
         <NavItem title="회원가입" />
 
         <NavSelectItem
@@ -99,6 +122,14 @@ const useStyles = makeStyles({
   },
   navRightStyles: {
     display: "flex",
+  },
+  loginStyles: {
+    padding: "14px",
+    height: "10px",
+    cursor: "pointer",
+    "&:hover": {
+      color: "#1FCBC7",
+    },
   },
 });
 
