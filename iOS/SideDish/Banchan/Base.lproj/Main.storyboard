@@ -8,16 +8,16 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Banchan View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Banchan" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="BanchanViewController" customModule="Banchan" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="D56-Is-011">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="BanchanCell" id="jMU-QL-v79" userLabel="Product Cell" customClass="BanchanCell" customModule="Banchan" customModuleProvider="target">
@@ -27,8 +27,8 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="133"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="N54-wX-zL9" userLabel="Product Stack View">
-                                                    <rect key="frame" x="149" y="21" width="249" height="122"/>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="N54-wX-zL9" userLabel="Product Stack View">
+                                                    <rect key="frame" x="149" y="21" width="249" height="91"/>
                                                     <subviews>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="1ly-ZG-uyd" userLabel="Title Stack View">
                                                             <rect key="frame" x="0.0" y="0.0" width="98" height="34.5"/>
@@ -82,8 +82,8 @@
                                                                 </stackView>
                                                             </subviews>
                                                         </stackView>
-                                                        <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="sdD-SG-vc3" userLabel="Badge Stack View" customClass="BadgeView" customModule="Banchan" customModuleProvider="target">
-                                                            <rect key="frame" x="0.0" y="72" width="50" height="50"/>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="sdD-SG-vc3" userLabel="Badge Stack View" customClass="BadgeView" customModule="Banchan" customModuleProvider="target">
+                                                            <rect key="frame" x="0.0" y="72" width="30" height="19"/>
                                                         </stackView>
                                                     </subviews>
                                                 </stackView>
@@ -116,6 +116,7 @@
                                             <outlet property="priceStackView" destination="sRA-PH-OB0" id="fzD-7B-3Td"/>
                                             <outlet property="salePriceLabel" destination="Cbq-Of-FYV" id="hHC-nt-GCU"/>
                                             <outlet property="titleLabel" destination="8se-S1-hF1" id="WVz-qs-n62"/>
+                                            <segue destination="LUE-FV-ZBh" kind="show" id="Igr-dP-92h"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -139,12 +140,29 @@
             </objects>
             <point key="canvasLocation" x="850.72463768115949" y="128.57142857142856"/>
         </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="bwh-NW-XtH">
+            <objects>
+                <viewController id="LUE-FV-ZBh" customClass="DetailViewController" customModule="Banchan" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jIb-De-k6Y">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="Bbm-0D-Hvf"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="qdA-6T-vsn"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fgK-k0-9F3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1575" y="129"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="0VN-7b-lnl">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="jzO-Yb-4N1" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="jzO-Yb-4N1" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="lqC-oV-FCR">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>

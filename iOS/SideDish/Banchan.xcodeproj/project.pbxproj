@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		C22EE1F22451700B0046E27B /* BanchanTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C22EE1F12451700B0046E27B /* BanchanTests.swift */; };
 		C2764D9824581C7E00E9018A /* DefaultLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2764D9724581C7E00E9018A /* DefaultLocation.swift */; };
+		C2764D9A2458597400E9018A /* BanchanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2764D992458597400E9018A /* BanchanViewController.swift */; };
+		C2764D9C2458599700E9018A /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2764D9B2458599700E9018A /* DetailViewController.swift */; };
 		C28003A8245012A4005D739E /* BanchanResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28003A7245012A4005D739E /* BanchanResponse.swift */; };
 		C28003AB245017DB005D739E /* Endpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28003AA245017DB005D739E /* Endpoints.swift */; };
 		C28003AD245018AA005D739E /* APIBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28003AC245018AA005D739E /* APIBuilder.swift */; };
@@ -17,7 +19,6 @@
 		C28003B524503251005D739E /* BanchanUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28003B424503251005D739E /* BanchanUseCase.swift */; };
 		C2969997244E956200CE191F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2969996244E956200CE191F /* AppDelegate.swift */; };
 		C2969999244E956200CE191F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2969998244E956200CE191F /* SceneDelegate.swift */; };
-		C296999B244E956200CE191F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C296999A244E956200CE191F /* ViewController.swift */; };
 		C296999E244E956200CE191F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C296999C244E956200CE191F /* Main.storyboard */; };
 		C29699A0244E956600CE191F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C296999F244E956600CE191F /* Assets.xcassets */; };
 		C29699A3244E956600CE191F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C29699A1244E956600CE191F /* LaunchScreen.storyboard */; };
@@ -51,6 +52,8 @@
 		C22EE1F12451700B0046E27B /* BanchanTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BanchanTests.swift; sourceTree = "<group>"; };
 		C22EE1F32451700B0046E27B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C2764D9724581C7E00E9018A /* DefaultLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultLocation.swift; sourceTree = "<group>"; };
+		C2764D992458597400E9018A /* BanchanViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BanchanViewController.swift; sourceTree = "<group>"; };
+		C2764D9B2458599700E9018A /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		C28003A7245012A4005D739E /* BanchanResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BanchanResponse.swift; sourceTree = "<group>"; };
 		C28003AA245017DB005D739E /* Endpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoints.swift; sourceTree = "<group>"; };
 		C28003AC245018AA005D739E /* APIBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIBuilder.swift; sourceTree = "<group>"; };
@@ -60,7 +63,6 @@
 		C2969993244E956200CE191F /* Banchan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Banchan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2969996244E956200CE191F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C2969998244E956200CE191F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		C296999A244E956200CE191F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		C296999D244E956200CE191F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C296999F244E956600CE191F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C29699A2244E956600CE191F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -120,7 +122,8 @@
 		C28003A62450125C005D739E /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				C296999A244E956200CE191F /* ViewController.swift */,
+				C2764D992458597400E9018A /* BanchanViewController.swift */,
+				C2764D9B2458599700E9018A /* DetailViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -335,6 +338,8 @@
 			files = (
 				C2E88283244F05B600E2CECA /* ReusableView.swift in Sources */,
 				C2E88286244F06D900E2CECA /* BanchanDelegate.swift in Sources */,
+				C2764D9C2458599700E9018A /* DetailViewController.swift in Sources */,
+				C2764D9A2458597400E9018A /* BanchanViewController.swift in Sources */,
 				C2BBA5522451844B00E76F08 /* ViewModelBinding.swift in Sources */,
 				C28003B1245020EF005D739E /* NetworkManager.swift in Sources */,
 				C2BBA55024517DB400E76F08 /* CategorizedBanchanViewModel.swift in Sources */,
@@ -347,7 +352,6 @@
 				C2D8E0FF244F301100F4031F /* BadgeView.swift in Sources */,
 				C28003B524503251005D739E /* BanchanUseCase.swift in Sources */,
 				C2CD5E76244EB6D5000C41B8 /* BorderedLabel.swift in Sources */,
-				C296999B244E956200CE191F /* ViewController.swift in Sources */,
 				C28003AB245017DB005D739E /* Endpoints.swift in Sources */,
 				C2969997244E956200CE191F /* AppDelegate.swift in Sources */,
 				C2D8E105244F38A000F4031F /* BadgeLabel.swift in Sources */,

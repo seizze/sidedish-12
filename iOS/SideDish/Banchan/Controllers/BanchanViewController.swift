@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  BanchanViewController.swift
 //  Banchan
 //
 //  Created by Chaewan Park on 2020/04/21.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class BanchanViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -22,6 +22,11 @@ class ViewController: UIViewController {
         configureTableView()
         configureViewModel()
         configureUseCase()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: false)
     }
     
     private func configureTableView() {
