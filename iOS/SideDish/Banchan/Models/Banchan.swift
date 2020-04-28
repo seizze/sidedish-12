@@ -9,21 +9,20 @@
 import Foundation
 
 struct Banchan: Decodable {
-    let detailHash: String
+    let id: Int
     let image: String
     let alt: String
     let deliveryType: [DeliveryType]
-    let title, bodyDescription: String
+    let title, banchanDescription: String
     let nPrice: String?
     let sPrice: String
     let badge: [Badge]?
     
     enum CodingKeys: String, CodingKey {
-        case detailHash = "detail_hash"
-        case image, alt
+        case id, image, alt
         case deliveryType = "delivery_type"
         case title
-        case bodyDescription = "description"
+        case banchanDescription = "description"
         case nPrice = "n_price"
         case sPrice = "s_price"
         case badge
@@ -35,9 +34,14 @@ enum DeliveryType: String, Decodable {
     case nationwide = "전국택배"
 }
 
-enum Badge: String, Decodable {
-    case event = "이벤트특가"
-    case launching = "론칭특가"
+struct Badge: Decodable {
+    let name: String
+    let color: String
+    
+    enum CodingKeys: String, CodingKey {
+        case name = "badge_name"
+        case color = "badge_color"
+    }
 }
 
 extension Banchan {
@@ -47,14 +51,5 @@ extension Banchan {
     
     var salePrice: String {
         return sPrice.trimmingCharacters(in: ["원"])
-    }
-}
-
-extension Badge {
-    var badgeType: BadgeLabel {
-        switch self {
-        case .event: return EventBadge()
-        case .launching: return LaunchingBadge()
-        }
     }
 }

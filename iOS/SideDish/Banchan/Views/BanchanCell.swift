@@ -28,11 +28,11 @@ class BanchanCell: UITableViewCell {
     
     private func configureCell() {
         titleLabel.text = banchan?.title
-        detailLabel.text = banchan?.bodyDescription
+        detailLabel.text = banchan?.banchanDescription
         normalPriceLabel.text = banchan?.nPrice
         salePriceLabel.text = banchan?.salePrice
         priceStackView.spacing = CGFloat(!(banchan?.isOnSale ?? true) ? 4 : 0)
-        banchan?.badge?.forEach { badgeStackView.addArrangedSubview($0.badgeType) }
+//        banchan?.badge?.forEach { badgeStackView.addArrangedSubview($0.badgeType) }
         guard let url = banchan?.image else { return }
         BanchanUseCase.performImageFetching(with: NetworkManager(), url: url) {
             guard let image = UIImage(data: $0) else { return }
