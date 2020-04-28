@@ -17,7 +17,7 @@ class ImageCollectionViewModel: ViewModelBinding {
     
     private var changeHandler: (Key) -> Void
     
-    init(with images: Key = nil, handler: @escaping (Key) -> Void = { _ in }) {
+    init(with images: Key = [:], handler: @escaping (Key) -> Void = { _ in }) {
         self.changeHandler = handler
         self.images = images
         changeHandler(images)
@@ -29,5 +29,10 @@ class ImageCollectionViewModel: ViewModelBinding {
     
     func updateNotify(handler: @escaping (Key) -> Void) {
         self.changeHandler = handler
+    }
+    
+    func add(_ image: UIImage, at index: Int) {
+        images?[index] = image
+        print(images)
     }
 }

@@ -9,9 +9,9 @@
 import Foundation
 
 struct ImageUseCase {
-    static func performImageFetching(with manager: NetworkManageable,
-                                     url: String,
-                                     completion: @escaping (Data) -> ()) {
+    static func performFetching(with manager: NetworkManageable,
+                                url: String,
+                                completion: @escaping (Data) -> ()) {
         guard let url = URL(string: url) else { return }
         let imageExists = readIfImageExists(url.lastPathComponent) { image in
             completion(image)

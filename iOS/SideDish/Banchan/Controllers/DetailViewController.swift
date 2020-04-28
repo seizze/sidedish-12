@@ -37,6 +37,16 @@ class DetailViewController: UIViewController {
                 self.pagingView.configure(imageCount: detail?.thumbImages.count ?? 0,
                                           width: self.view.frame.width)
             }
+            self.request(detail?.thumbImages) { self.pagingViewModel.add($0, at: $1) }
+        }
+    }
+    
+    private func request(_ images: [String]?, completion: @escaping (UIImage, Int) -> Void) {
+        images?.enumerated().forEach { index, url in
+            ImageUseCase.performFetching(with: NetworkManager(), url: url) {
+                guard let image = UIImage(data: $0) else { return }
+                completion(image, index)
+            }
         }
     }
 }
