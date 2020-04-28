@@ -20,7 +20,6 @@
 		C296999E244E956200CE191F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C296999C244E956200CE191F /* Main.storyboard */; };
 		C29699A0244E956600CE191F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C296999F244E956600CE191F /* Assets.xcassets */; };
 		C29699A3244E956600CE191F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C29699A1244E956600CE191F /* LaunchScreen.storyboard */; };
-		C2BBA54A2451789200E76F08 /* BanchanViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2BBA5492451789200E76F08 /* BanchanViewModel.swift */; };
 		C2BBA54C24517C1300E76F08 /* Banchan.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2BBA54B24517C1300E76F08 /* Banchan.swift */; };
 		C2BBA55024517DB400E76F08 /* CategorizedBanchanViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2BBA54F24517DB400E76F08 /* CategorizedBanchanViewModel.swift */; };
 		C2BBA5522451844B00E76F08 /* ViewModelBinding.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2BBA5512451844B00E76F08 /* ViewModelBinding.swift */; };
@@ -68,7 +67,6 @@
 		C296999F244E956600CE191F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C29699A2244E956600CE191F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C29699A4244E956600CE191F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C2BBA5492451789200E76F08 /* BanchanViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BanchanViewModel.swift; sourceTree = "<group>"; };
 		C2BBA54B24517C1300E76F08 /* Banchan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Banchan.swift; sourceTree = "<group>"; };
 		C2BBA54F24517DB400E76F08 /* CategorizedBanchanViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategorizedBanchanViewModel.swift; sourceTree = "<group>"; };
 		C2BBA5512451844B00E76F08 /* ViewModelBinding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelBinding.swift; sourceTree = "<group>"; };
@@ -194,7 +192,6 @@
 			isa = PBXGroup;
 			children = (
 				C2BBA5512451844B00E76F08 /* ViewModelBinding.swift */,
-				C2BBA5492451789200E76F08 /* BanchanViewModel.swift */,
 				C2BBA54F24517DB400E76F08 /* CategorizedBanchanViewModel.swift */,
 			);
 			path = ViewModels;
@@ -362,7 +359,6 @@
 				C2BBA55024517DB400E76F08 /* CategorizedBanchanViewModel.swift in Sources */,
 				C2D8E10B244F3CF300F4031F /* OutOfStockBadge.swift in Sources */,
 				C2CD5E78244EC65A000C41B8 /* RoundImageView.swift in Sources */,
-				C2BBA54A2451789200E76F08 /* BanchanViewModel.swift in Sources */,
 				C28003AF245018CA005D739E /* APIRouter.swift in Sources */,
 				C2E88278244EE65800E2CECA /* BanchanCell.swift in Sources */,
 				C28003AD245018AA005D739E /* APIBuilder.swift in Sources */,

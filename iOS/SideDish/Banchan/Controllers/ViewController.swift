@@ -33,34 +33,15 @@ class ViewController: UIViewController {
     }
     
     private func configureViewModel() {
-        viewModel.updateNotify { change, _ in
+        viewModel.updateNotify { change in
             DispatchQueue.main.async {
                 if let section = change?.section {
                     self.tableView.reloadSections(IndexSet(section...section), with: .automatic)
                 } else {
                     self.tableView.reloadData()
                 }
-                self.group.leave();
+                self.group.leave()
             }
-        }
-        viewModel.updateBanchanNotify { cell, banchan, data in
-            guard let banchan = banchan else { return }
-            self.bindCell(cell: cell, banchan: banchan, data: data)
-        }
-    }
-    
-    private func bindCell(cell: BanchanCell,
-                          banchan: Banchan,
-                          data: Int?) -> Void {
-        cell.titleLabel.text = banchan.title
-        cell.detailLabel.text = banchan.bodyDescription
-        cell.normalPriceLabel.text = banchan.nPrice
-        cell.salePriceLabel.text = banchan.salePrice
-        cell.priceStackView.spacing = CGFloat(integerLiteral: data ?? 0)
-        banchan.badge?.forEach { cell.badgeStackView.addArrangedSubview($0.badgeType) }
-        BanchanUseCase.performImageFetching(with: NetworkManager(), url: banchan.image) {
-            guard let image = UIImage(data: $0) else { return }
-            DispatchQueue.main.async { cell.banchanImageView.image = image }
         }
     }
     
@@ -69,7 +50,7 @@ class ViewController: UIViewController {
             self.queue.async {
                 self.group.wait()
                 self.group.enter()
-                self.viewModel.append(key: index, value: banchans.map { BanchanViewModel(with: $0) })
+                self.viewModel.append(key: index, value: banchans)
             }
         }
     }
