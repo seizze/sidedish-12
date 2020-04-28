@@ -27,10 +27,9 @@ class ViewController: UIViewController {
     }
     
     private func configureTableView() {
+        tableView.register(BanchanHeaderView.nib, forHeaderFooterViewReuseIdentifier: BanchanHeaderView.reuseIdentifier)
         tableView.delegate = delegate
         tableView.dataSource = viewModel
-        
-        tableView.register(BanchanHeaderView.nib, forHeaderFooterViewReuseIdentifier: BanchanHeaderView.reuseIdentifier)
     }
     
     private func configureViewModel() {
