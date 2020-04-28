@@ -3,15 +3,12 @@ import Nav from "./components/nav/Nav";
 import Header from "./components/header/Header";
 import Menu from "./components/menuTab/Menu";
 import Carousel from "./components/carousel/Carousel";
-import { makeStyles } from "@material-ui/core/styles";
 
 import "./styles/reset.css";
 
-import useFetch from "./components/UseFetch.jsx";
+import useFetch from "./components/fetch/useFetch.jsx";
 
 const App = () => {
-  const classes = useStyles();
-
   const [carouselMain, setCarouselMain] = useState({ data: { banchans: [] } });
   const [carouselSide, setCarouselSide] = useState({ data: { banchans: [] } });
   const [carouselSoup, setCarouselSoup] = useState({ data: { banchans: [] } });
@@ -46,12 +43,5 @@ const App = () => {
     </>
   );
 };
-
-const useStyles = makeStyles({
-  root: {
-    marginTop: "50px",
-    marginBottom: "50px",
-  },
-});
 
 export default App;
