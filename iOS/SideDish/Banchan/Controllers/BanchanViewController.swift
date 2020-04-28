@@ -34,7 +34,7 @@ class BanchanViewController: UIViewController {
             let indexPath = tableView.indexPathForSelectedRow,
             let id = viewModel.banchan(category: indexPath.section, index: indexPath.row)?.id else { return }
         BanchanDetailUseCase.performFetching(with: NetworkManager(), banchanID: id) {
-            viewController.viewModel.update(banchanDetail: $0)
+            viewController.descriptionViewModel.update(banchanDetail: $0)
         }
     }
     

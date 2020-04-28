@@ -10,4 +10,17 @@ import UIKit
 
 class ImageCollectionView: UIStackView {
     
+    func configure(imageCount: Int, width: CGFloat? = nil, height: CGFloat? = nil) {
+        (0..<imageCount).forEach { _ in
+            let view = UIImageView()
+            if let width = width { view.widthAnchor.constraint(equalToConstant: width).isActive = true }
+            if let height = height { view.heightAnchor.constraint(equalToConstant: height).isActive = true }
+            view.backgroundColor = .lightGray
+            self.addArrangedSubview(view)
+        }
+    }
+    
+    func update(_ image: UIImage, at index: Int) {
+        
+    }
 }

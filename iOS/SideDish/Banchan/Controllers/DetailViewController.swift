@@ -14,12 +14,15 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var descriptionView: DescriptionView!
     @IBOutlet weak var detailView: ImageCollectionView!
     
-    var viewModel = BanchanDetailViewModel()
+    private var pagingViewModel = ImageCollectionViewModel()
+    private var detailViewModel = ImageCollectionViewModel()
+    
+    var descriptionViewModel = BanchanDetailViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        configureViewModel()
+        configureViewModels()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -27,9 +30,13 @@ class DetailViewController: UIViewController {
         navigationController?.setNavigationBarHidden(false, animated: true)
     }
     
-    private func configureViewModel() {
-        viewModel.updateNotify { detail in
-            DispatchQueue.main.async { self.descriptionView.banchanDetail = detail }
+    private func configureViewModels() {
+        descriptionViewModel.updateNotify { detail in
+            DispatchQueue.main.async {
+                self.descriptionView.banchanDetail = detail
+                self.pagingView.configure(imageCount: detail?.thumbImages.count ?? 0,
+                                          width: self.view.frame.width)
+            }
         }
     }
 }
