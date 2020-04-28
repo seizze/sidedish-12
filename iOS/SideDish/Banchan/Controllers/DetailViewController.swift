@@ -31,6 +31,10 @@ class DetailViewController: UIViewController {
     }
     
     private func configureViewModels() {
+        pagingViewModel.updateNotify { change in
+            guard let index = change?.index else { return }
+            DispatchQueue.main.async { self.pagingView.update(change?.images[index], at: index) }
+        }
         descriptionViewModel.updateNotify { detail in
             DispatchQueue.main.async {
                 self.descriptionView.banchanDetail = detail

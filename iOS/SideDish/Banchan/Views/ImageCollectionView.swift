@@ -16,11 +16,13 @@ class ImageCollectionView: UIStackView {
             if let width = width { view.widthAnchor.constraint(equalToConstant: width).isActive = true }
             if let height = height { view.heightAnchor.constraint(equalToConstant: height).isActive = true }
             view.backgroundColor = .lightGray
+            view.contentMode = .scaleAspectFill
             self.addArrangedSubview(view)
         }
     }
     
-    func update(_ image: UIImage, at index: Int) {
-        
+    func update(_ image: UIImage?, at index: Int) {
+        guard let imageView = arrangedSubviews[index] as? UIImageView else { return }
+        imageView.image = image
     }
 }

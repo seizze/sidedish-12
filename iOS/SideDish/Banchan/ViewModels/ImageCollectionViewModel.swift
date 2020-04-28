@@ -8,23 +8,35 @@
 
 import UIKit
 
+struct ImagesChangeDetails {
+    let index: Int?
+    let images: [Int: UIImage]
+}
+
+extension ImagesChangeDetails {
+    init() {
+        index = nil
+        images = [:]
+    }
+}
+
 class ImageCollectionViewModel: ViewModelBinding {
-    typealias Key = [Int: UIImage?]?
+    typealias Key = ImagesChangeDetails?
     
-    private var images: Key = nil {
-        didSet { changeHandler(images) }
+    private var imagesChageDetails: Key = nil {
+        didSet { changeHandler(imagesChageDetails) }
     }
     
     private var changeHandler: (Key) -> Void
     
-    init(with images: Key = [:], handler: @escaping (Key) -> Void = { _ in }) {
+    init(with images: Key = ImagesChangeDetails(), handler: @escaping (Key) -> Void = { _ in }) {
         self.changeHandler = handler
-        self.images = images
+        self.imagesChageDetails = images
         changeHandler(images)
     }
     
     func update(images: Key) {
-        self.images = images
+        self.imagesChageDetails = images
     }
     
     func updateNotify(handler: @escaping (Key) -> Void) {
@@ -32,7 +44,8 @@ class ImageCollectionViewModel: ViewModelBinding {
     }
     
     func add(_ image: UIImage, at index: Int) {
-        images?[index] = image
-        print(images)
+        guard var images = imagesChageDetails?.images else { return }
+        images[index] = image
+        imagesChageDetails = ImagesChangeDetails(index: index, images: images)
     }
 }
