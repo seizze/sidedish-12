@@ -29,15 +29,15 @@ public class LoginController {
 
     @Value("github_redirect_url")
     private String redirectUrl;
-
+  
     private static final LoginService loginService = new LoginService();
 
     @GetMapping("/githubLogin")
     public RedirectView githubLogin() {
 
         RedirectView redirectView = new RedirectView();
+      
         String url = loginService.getRedirectUrl(client_id, redirectUrl);
-
         redirectView.setUrl(url);
         return redirectView;
     }
@@ -45,6 +45,7 @@ public class LoginController {
     @GetMapping("/login")
     public RedirectView login(@PathParam("code") String code, HttpServletResponse httpServletResponse) {
         LoginToken response = loginService.getAccessToken(code, client_id, client_secret, redirectUrl);
+
         User responseUer = loginService.getUserInfo(response.getTokenType(), response.getAccessToken());
 
         String jws = loginService.generateJwtToken(responseUer.getUserId());
