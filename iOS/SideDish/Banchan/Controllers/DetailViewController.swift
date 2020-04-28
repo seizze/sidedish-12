@@ -29,7 +29,7 @@ class DetailViewController: UIViewController {
     
     private func configureViewModel() {
         viewModel.updateNotify { detail in
-            print(detail)
+            DispatchQueue.main.async { self.descriptionView.banchanDetail = detail }
         }
     }
 }

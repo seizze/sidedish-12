@@ -318,6 +318,15 @@
                                                     <constraint firstItem="jHd-Vm-rbh" firstAttribute="top" secondItem="lfr-B2-qMB" secondAttribute="top" constant="16" id="pWH-4L-Hfs"/>
                                                     <constraint firstAttribute="trailing" secondItem="jHd-Vm-rbh" secondAttribute="trailing" constant="20" id="tkp-JS-UgV"/>
                                                 </constraints>
+                                                <connections>
+                                                    <outlet property="deliveryFeeLabel" destination="T4V-DC-WHW" id="p9o-BF-jD6"/>
+                                                    <outlet property="deliveryInfoLabel" destination="VlQ-hd-X5B" id="qYi-sX-A8p"/>
+                                                    <outlet property="descriptionLabel" destination="hk3-la-e2E" id="MjB-Pl-fza"/>
+                                                    <outlet property="normalPriceLabel" destination="Kab-22-Keb" id="wKG-Te-3ns"/>
+                                                    <outlet property="pointLabel" destination="q9D-Q2-vDk" id="F1Y-ek-kz6"/>
+                                                    <outlet property="salePriceLabel" destination="Vnm-mI-ITb" id="TiR-F2-kJA"/>
+                                                    <outlet property="titleLabel" destination="IUm-NY-JjS" id="jiS-Km-emS"/>
+                                                </connections>
                                             </view>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="7tp-EH-o5r" userLabel="Detail Image Stack View" customClass="ImageCollectionView" customModule="Banchan" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="448" width="414" height="0.0"/>
