@@ -16,6 +16,8 @@
 		C2764DA22458AFAE00E9018A /* DescriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2764DA12458AFAE00E9018A /* DescriptionView.swift */; };
 		C2764DA42458B1A900E9018A /* BanchanDetailResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2764DA32458B1A900E9018A /* BanchanDetailResponse.swift */; };
 		C2764DA62458B2D300E9018A /* BanchanDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2764DA52458B2D300E9018A /* BanchanDetail.swift */; };
+		C2764DA82458B37B00E9018A /* BanchanDetailUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2764DA72458B37B00E9018A /* BanchanDetailUseCase.swift */; };
+		C2764DAA2458B38400E9018A /* ImageUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2764DA92458B38400E9018A /* ImageUseCase.swift */; };
 		C28003A8245012A4005D739E /* BanchanResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28003A7245012A4005D739E /* BanchanResponse.swift */; };
 		C28003AB245017DB005D739E /* Endpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28003AA245017DB005D739E /* Endpoints.swift */; };
 		C28003AD245018AA005D739E /* APIBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28003AC245018AA005D739E /* APIBuilder.swift */; };
@@ -64,6 +66,8 @@
 		C2764DA12458AFAE00E9018A /* DescriptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionView.swift; sourceTree = "<group>"; };
 		C2764DA32458B1A900E9018A /* BanchanDetailResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BanchanDetailResponse.swift; sourceTree = "<group>"; };
 		C2764DA52458B2D300E9018A /* BanchanDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BanchanDetail.swift; sourceTree = "<group>"; };
+		C2764DA72458B37B00E9018A /* BanchanDetailUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BanchanDetailUseCase.swift; sourceTree = "<group>"; };
+		C2764DA92458B38400E9018A /* ImageUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageUseCase.swift; sourceTree = "<group>"; };
 		C28003A7245012A4005D739E /* BanchanResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BanchanResponse.swift; sourceTree = "<group>"; };
 		C28003AA245017DB005D739E /* Endpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoints.swift; sourceTree = "<group>"; };
 		C28003AC245018AA005D739E /* APIBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIBuilder.swift; sourceTree = "<group>"; };
@@ -155,6 +159,8 @@
 			isa = PBXGroup;
 			children = (
 				C28003B424503251005D739E /* BanchanUseCase.swift */,
+				C2764DA72458B37B00E9018A /* BanchanDetailUseCase.swift */,
+				C2764DA92458B38400E9018A /* ImageUseCase.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -352,6 +358,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C2E88283244F05B600E2CECA /* ReusableView.swift in Sources */,
+				C2764DA82458B37B00E9018A /* BanchanDetailUseCase.swift in Sources */,
 				C2E88286244F06D900E2CECA /* BanchanDelegate.swift in Sources */,
 				C2764D9C2458599700E9018A /* DetailViewController.swift in Sources */,
 				C2764D9A2458597400E9018A /* BanchanViewController.swift in Sources */,
@@ -365,6 +372,7 @@
 				C2E88278244EE65800E2CECA /* BanchanCell.swift in Sources */,
 				C28003AD245018AA005D739E /* APIBuilder.swift in Sources */,
 				C2E8827A244EE82F00E2CECA /* BanchanHeaderView.swift in Sources */,
+				C2764DAA2458B38400E9018A /* ImageUseCase.swift in Sources */,
 				C2D8E103244F35EE00F4031F /* UIColorExtension.swift in Sources */,
 				C2D8E0FF244F301100F4031F /* BadgeView.swift in Sources */,
 				C2764DA22458AFAE00E9018A /* DescriptionView.swift in Sources */,
