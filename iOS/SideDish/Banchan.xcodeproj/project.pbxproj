@@ -25,13 +25,9 @@
 		C2BBA5522451844B00E76F08 /* ViewModelBinding.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2BBA5512451844B00E76F08 /* ViewModelBinding.swift */; };
 		C2CD5E76244EB6D5000C41B8 /* BorderedLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CD5E75244EB6D5000C41B8 /* BorderedLabel.swift */; };
 		C2CD5E78244EC65A000C41B8 /* RoundImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CD5E77244EC65A000C41B8 /* RoundImageView.swift */; };
-		C2D8E0FF244F301100F4031F /* BadgeStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D8E0FE244F301100F4031F /* BadgeStackView.swift */; };
+		C2D8E0FF244F301100F4031F /* BadgeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D8E0FE244F301100F4031F /* BadgeView.swift */; };
 		C2D8E103244F35EE00F4031F /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D8E102244F35EE00F4031F /* UIColorExtension.swift */; };
 		C2D8E105244F38A000F4031F /* BadgeLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D8E104244F38A000F4031F /* BadgeLabel.swift */; };
-		C2D8E107244F3CA400F4031F /* EventBadge.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D8E106244F3CA400F4031F /* EventBadge.swift */; };
-		C2D8E109244F3CB200F4031F /* LaunchingBadge.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D8E108244F3CB200F4031F /* LaunchingBadge.swift */; };
-		C2D8E10B244F3CF300F4031F /* OutOfStockBadge.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D8E10A244F3CF300F4031F /* OutOfStockBadge.swift */; };
-		C2D8E10D244F3D2000F4031F /* FreeGiftBadge.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2D8E10C244F3D2000F4031F /* FreeGiftBadge.swift */; };
 		C2D8E10F244F42EC00F4031F /* BanchanHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2D8E10E244F42EC00F4031F /* BanchanHeaderView.xib */; };
 		C2E88278244EE65800E2CECA /* BanchanCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E88277244EE65800E2CECA /* BanchanCell.swift */; };
 		C2E8827A244EE82F00E2CECA /* BanchanHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E88279244EE82F00E2CECA /* BanchanHeaderView.swift */; };
@@ -72,13 +68,9 @@
 		C2BBA5512451844B00E76F08 /* ViewModelBinding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelBinding.swift; sourceTree = "<group>"; };
 		C2CD5E75244EB6D5000C41B8 /* BorderedLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BorderedLabel.swift; sourceTree = "<group>"; };
 		C2CD5E77244EC65A000C41B8 /* RoundImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundImageView.swift; sourceTree = "<group>"; };
-		C2D8E0FE244F301100F4031F /* BadgeStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgeStackView.swift; sourceTree = "<group>"; };
+		C2D8E0FE244F301100F4031F /* BadgeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgeView.swift; sourceTree = "<group>"; };
 		C2D8E102244F35EE00F4031F /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		C2D8E104244F38A000F4031F /* BadgeLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BadgeLabel.swift; sourceTree = "<group>"; };
-		C2D8E106244F3CA400F4031F /* EventBadge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventBadge.swift; sourceTree = "<group>"; };
-		C2D8E108244F3CB200F4031F /* LaunchingBadge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchingBadge.swift; sourceTree = "<group>"; };
-		C2D8E10A244F3CF300F4031F /* OutOfStockBadge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutOfStockBadge.swift; sourceTree = "<group>"; };
-		C2D8E10C244F3D2000F4031F /* FreeGiftBadge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreeGiftBadge.swift; sourceTree = "<group>"; };
 		C2D8E10E244F42EC00F4031F /* BanchanHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BanchanHeaderView.xib; sourceTree = "<group>"; };
 		C2E88277244EE65800E2CECA /* BanchanCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BanchanCell.swift; sourceTree = "<group>"; };
 		C2E88279244EE82F00E2CECA /* BanchanHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BanchanHeaderView.swift; sourceTree = "<group>"; };
@@ -200,27 +192,15 @@
 		C2CD5E74244EB68C000C41B8 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				C2D8E0FB244F2C8100F4031F /* Badges */,
+				C2D8E104244F38A000F4031F /* BadgeLabel.swift */,
 				C2CD5E75244EB6D5000C41B8 /* BorderedLabel.swift */,
 				C2CD5E77244EC65A000C41B8 /* RoundImageView.swift */,
 				C2E88277244EE65800E2CECA /* BanchanCell.swift */,
 				C2E88279244EE82F00E2CECA /* BanchanHeaderView.swift */,
-				C2D8E0FE244F301100F4031F /* BadgeStackView.swift */,
+				C2D8E0FE244F301100F4031F /* BadgeView.swift */,
 				C2D8E10E244F42EC00F4031F /* BanchanHeaderView.xib */,
 			);
 			path = Views;
-			sourceTree = "<group>";
-		};
-		C2D8E0FB244F2C8100F4031F /* Badges */ = {
-			isa = PBXGroup;
-			children = (
-				C2D8E104244F38A000F4031F /* BadgeLabel.swift */,
-				C2D8E106244F3CA400F4031F /* EventBadge.swift */,
-				C2D8E108244F3CB200F4031F /* LaunchingBadge.swift */,
-				C2D8E10A244F3CF300F4031F /* OutOfStockBadge.swift */,
-				C2D8E10C244F3D2000F4031F /* FreeGiftBadge.swift */,
-			);
-			path = Badges;
 			sourceTree = "<group>";
 		};
 		C2E8827F244F006400E2CECA /* Utils */ = {
@@ -350,22 +330,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C2D8E109244F3CB200F4031F /* LaunchingBadge.swift in Sources */,
 				C2E88283244F05B600E2CECA /* ReusableView.swift in Sources */,
 				C2E88286244F06D900E2CECA /* BanchanDelegate.swift in Sources */,
 				C2BBA5522451844B00E76F08 /* ViewModelBinding.swift in Sources */,
-				C2D8E10D244F3D2000F4031F /* FreeGiftBadge.swift in Sources */,
 				C28003B1245020EF005D739E /* NetworkManager.swift in Sources */,
 				C2BBA55024517DB400E76F08 /* CategorizedBanchanViewModel.swift in Sources */,
-				C2D8E10B244F3CF300F4031F /* OutOfStockBadge.swift in Sources */,
 				C2CD5E78244EC65A000C41B8 /* RoundImageView.swift in Sources */,
 				C28003AF245018CA005D739E /* APIRouter.swift in Sources */,
 				C2E88278244EE65800E2CECA /* BanchanCell.swift in Sources */,
 				C28003AD245018AA005D739E /* APIBuilder.swift in Sources */,
 				C2E8827A244EE82F00E2CECA /* BanchanHeaderView.swift in Sources */,
-				C2D8E107244F3CA400F4031F /* EventBadge.swift in Sources */,
 				C2D8E103244F35EE00F4031F /* UIColorExtension.swift in Sources */,
-				C2D8E0FF244F301100F4031F /* BadgeStackView.swift in Sources */,
+				C2D8E0FF244F301100F4031F /* BadgeView.swift in Sources */,
 				C28003B524503251005D739E /* BanchanUseCase.swift in Sources */,
 				C2CD5E76244EB6D5000C41B8 /* BorderedLabel.swift in Sources */,
 				C296999B244E956200CE191F /* ViewController.swift in Sources */,

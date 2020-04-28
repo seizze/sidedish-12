@@ -1,5 +1,5 @@
 //
-//  BadgeStackView.swift
+//  BadgeView.swift
 //  Banchan
 //
 //  Created by Chaewan Park on 2020/04/21.
@@ -9,9 +9,16 @@
 import UIKit
 
 @IBDesignable
-class BadgeStackView: UIStackView {
+class BadgeView: UIStackView {
     
     override var intrinsicContentSize: CGSize {
         return CGSize(width: 30, height: 19)
+    }
+    
+    func addBadge(_ badge: Badge) {
+        let view = BadgeLabel()
+        view.setColor(to: badge.color)
+        view.setText(to: badge.name)
+        addArrangedSubview(view)
     }
 }

@@ -27,8 +27,8 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="133"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="N54-wX-zL9" userLabel="Product Stack View">
-                                                    <rect key="frame" x="149" y="21" width="249" height="91"/>
+                                                <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="N54-wX-zL9" userLabel="Product Stack View">
+                                                    <rect key="frame" x="149" y="21" width="249" height="122"/>
                                                     <subviews>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="1ly-ZG-uyd" userLabel="Title Stack View">
                                                             <rect key="frame" x="0.0" y="0.0" width="98" height="34.5"/>
@@ -82,8 +82,8 @@
                                                                 </stackView>
                                                             </subviews>
                                                         </stackView>
-                                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="sdD-SG-vc3" userLabel="Badge Stack View" customClass="BadgeStackView" customModule="Banchan" customModuleProvider="target">
-                                                            <rect key="frame" x="0.0" y="72" width="30" height="19"/>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="sdD-SG-vc3" userLabel="Badge Stack View" customClass="BadgeView" customModule="Banchan" customModuleProvider="target">
+                                                            <rect key="frame" x="0.0" y="72" width="50" height="50"/>
                                                         </stackView>
                                                     </subviews>
                                                 </stackView>
@@ -109,7 +109,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="badgeStackView" destination="sdD-SG-vc3" id="9a0-8h-6As"/>
+                                            <outlet property="badgeView" destination="sdD-SG-vc3" id="v4n-us-uai"/>
                                             <outlet property="banchanImageView" destination="AR6-Ai-jgg" id="kXy-n2-dn4"/>
                                             <outlet property="detailLabel" destination="6AF-5Z-8f1" id="zYQ-pk-Qit"/>
                                             <outlet property="normalPriceLabel" destination="yGT-K4-1mJ" id="xzi-G9-xx7"/>
