@@ -14,6 +14,8 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var descriptionView: DescriptionView!
     @IBOutlet weak var detailView: ImageCollectionView!
     
+    var banchanDetail: BanchanDetail?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
