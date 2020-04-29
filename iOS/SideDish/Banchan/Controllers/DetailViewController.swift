@@ -31,17 +31,23 @@ class DetailViewController: UIViewController {
     }
     
     private func configureViewModels() {
-        pagingViewModel.updateNotify { change in
+        pagingViewModel.updateNotify { [weak self] change in
             guard let index = change?.index else { return }
-            DispatchQueue.main.async { self.pagingView.update(change?.images[index], at: index) }
+            DispatchQueue.main.async { self?.pagingView.update(change?.images[index], at: index) }
         }
-        descriptionViewModel.updateNotify { detail in
+        detailViewModel.updateNotify { [weak self] change in
+            guard let index = change?.index else { return }
+            DispatchQueue.main.async { self?.detailView.update(change?.images[index], at: index) }
+        }
+        descriptionViewModel.updateNotify { [weak self] detail in
             DispatchQueue.main.async {
-                self.descriptionView.banchanDetail = detail
-                self.pagingView.configure(imageCount: detail?.thumbImages.count ?? 0,
-                                          width: self.view.frame.width)
+                self?.descriptionView.banchanDetail = detail
+                self?.pagingView.configure(imageCount: detail?.thumbImages.count ?? 0,
+                                           width: self?.view.frame.width)
+                self?.detailView.configure(imageCount: detail?.detailSection.count ?? 0)
             }
-            self.request(detail?.thumbImages) { self.pagingViewModel.add($0, at: $1) }
+            self?.request(detail?.thumbImages) { self?.pagingViewModel.add($0, at: $1) }
+            self?.request(detail?.detailSection) { self?.detailViewModel.add($0, at: $1) }
         }
     }
     
