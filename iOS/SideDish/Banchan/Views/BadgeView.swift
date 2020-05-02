@@ -17,7 +17,7 @@ class BadgeView: UIStackView {
     
     func addBadge(_ badge: Badge) {
         let view = BadgeLabel()
-        view.setColor(to: badge.color)
+        view.setColor(to: UIColor.badgePurple)
         view.setText(to: badge.name)
         addArrangedSubview(view)
     }

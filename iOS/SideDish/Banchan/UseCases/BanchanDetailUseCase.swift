@@ -10,7 +10,7 @@ import Foundation
 
 struct BanchanDetailUseCase {
     static func performFetching(with manager: NetworkManageable,
-                                banchanID id: Int,
+                                banchanID id: String,
                                 completion: @escaping (BanchanDetail) -> Void) {
         manager.request(BanchanDetailResponse.self,
                         with: DetailPageAPIRouter.detail(banchanID: id).urlRequest()) { result in
