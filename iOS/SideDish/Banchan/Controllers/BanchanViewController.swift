@@ -32,8 +32,9 @@ class BanchanViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let viewController = segue.destination as? DetailViewController,
             let indexPath = tableView.indexPathForSelectedRow,
-            let hash = viewModel.banchan(category: indexPath.section, index: indexPath.row)?.detailHash else { return }
-        BanchanDetailUseCase.performFetching(with: NetworkManager(), banchanID: hash) {
+            let item = viewModel.banchan(category: indexPath.section, index: indexPath.row) else { return }
+        viewController.title = item.title
+        BanchanDetailUseCase.performFetching(with: NetworkManager(), banchanID: item.detailHash) {
             viewController.descriptionViewModel.update(banchanDetail: $0)
         }
     }

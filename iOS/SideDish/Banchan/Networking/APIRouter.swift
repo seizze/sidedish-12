@@ -27,7 +27,7 @@ enum DetailPageAPIRouter: APIBuilder {
     
     var path: String {
         switch self {
-        case let .detail(id): return Endpoints.baseURL + "/\(id)"
+        case let .detail(id): return Endpoints.detail + "/\(id)"
         }
     }
 }

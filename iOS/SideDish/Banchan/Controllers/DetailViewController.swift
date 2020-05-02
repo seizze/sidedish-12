@@ -41,6 +41,7 @@ class DetailViewController: UIViewController {
         }
         descriptionViewModel.updateNotify { [weak self] detail in
             DispatchQueue.main.async {
+                self?.descriptionView.titleLabel.text = self?.title
                 self?.descriptionView.banchanDetail = detail
                 self?.pagingView.configure(imageCount: detail?.thumbImages.count ?? 0,
                                            width: self?.view.frame.width)

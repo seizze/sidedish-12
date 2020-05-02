@@ -23,12 +23,16 @@ class DescriptionView: UIView {
     }
     
     private func configureView() {
-        titleLabel.text = banchanDetail?.title
-        descriptionLabel.text = banchanDetail?.dataDescription
-        normalPriceLabel.text = banchanDetail?.nPrice
-        salePriceLabel.text = banchanDetail?.sPrice
-        pointLabel.text = banchanDetail?.point
-        deliveryFeeLabel.text = banchanDetail?.deliveryFee
-        deliveryInfoLabel.text = banchanDetail?.deliveryInfo
+        guard let banchan = banchanDetail else { return }
+        descriptionLabel.text = banchan.productDescription
+        if banchan.prices.count > 1 {
+            normalPriceLabel.text = banchan.prices[0]
+            salePriceLabel.text = banchan.prices[1]
+        } else {
+            salePriceLabel.text = banchan.prices[0]
+        }
+        pointLabel.text = banchan.point
+        deliveryFeeLabel.text = banchan.deliveryFee
+        deliveryInfoLabel.text = banchan.deliveryInfo
     }
 }
