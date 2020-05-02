@@ -44,10 +44,14 @@ class DetailViewController: UIViewController {
                 self?.descriptionView.banchanDetail = detail
                 self?.pagingView.configure(imageCount: detail?.thumbImages.count ?? 0,
                                            width: self?.view.frame.width)
-                self?.detailView.configure(imageCount: detail?.detailSection.count ?? 0)
+                self?.detailView.configure(imageCount: detail?.detailSection.count ?? 0,
+                                           width: self?.view.frame.width)
             }
             self?.request(detail?.thumbImages) { self?.pagingViewModel.add($0, at: $1) }
-            self?.request(detail?.detailSection) { self?.detailViewModel.add($0, at: $1) }
+            self?.request(detail?.detailSection) { image, index in
+                self?.detailViewModel.add(image, at: index)
+                DispatchQueue.main.async { self?.detailView.fitImage(at: index) }
+            }
         }
     }
     

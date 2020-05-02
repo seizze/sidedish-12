@@ -25,4 +25,10 @@ class ImageCollectionView: UIStackView {
         guard let imageView = arrangedSubviews[index] as? UIImageView else { return }
         imageView.image = image
     }
+    
+    func fitImage(at index: Int) {
+        guard let view = arrangedSubviews[index] as? UIImageView, let image = view.image else { return }
+        let aspectRatio = image.size.width / image.size.height
+        view.widthAnchor.constraint(equalTo: view.heightAnchor, multiplier: aspectRatio).isActive = true
+    }
 }
