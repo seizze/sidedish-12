@@ -2,11 +2,13 @@
 
 코드스쿼드 반찬 서비스 iOS 앱
 
+<p align="center"><img width=500 src="result.gif"></p>
+
 ## 단계별 구현 내용
 
 ### 메인페이지 구현
 
-> [PR #18 [iOS] Todo List Board UI 구현][pr18]
+> [PR #37 [iOS] 메인페이지 구현][pr37]
 
 * 스토리보드로 커스텀 테이블뷰 셀, 커스텀 헤더 뷰 구현
 * 테이블 뷰에 표시할 모델을 갖고있는 뷰모델과, 테이블 뷰 셀에 표시할 모델을 갖고있는 뷰모델 구현
@@ -42,6 +44,8 @@ Related issues: [#60][issue60]
 
 ![result2](result2.png)
 
+
+[pr37]: https://github.com/codesquad-member-2020/sidedish-12/pull/37
 
 [issue8]: https://github.com/codesquad-member-2020/sidedish-12/issues/8
 [issue13]: https://github.com/codesquad-member-2020/sidedish-12/issues/13
