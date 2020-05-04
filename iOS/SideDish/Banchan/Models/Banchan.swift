@@ -9,7 +9,7 @@
 import Foundation
 
 struct Banchan: Decodable {
-    let id: Int
+    let detailHash: String
     let image: String
     let alt: String
     let deliveryType: [DeliveryType]
@@ -19,7 +19,8 @@ struct Banchan: Decodable {
     let badge: [Badge]?
     
     enum CodingKeys: String, CodingKey {
-        case id, image, alt
+        case detailHash = "detail_hash"
+        case image, alt
         case deliveryType = "delivery_type"
         case title
         case banchanDescription = "description"
@@ -36,11 +37,14 @@ enum DeliveryType: String, Decodable {
 
 struct Badge: Decodable {
     let name: String
-    let color: String
     
-    enum CodingKeys: String, CodingKey {
-        case name = "badge_name"
-        case color = "badge_color"
+    init(from decoder: Decoder) throws {
+        do {
+            let container = try decoder.singleValueContainer()
+            self.name = try container.decode(String.self)
+        } catch {
+            throw error
+        }
     }
 }
 

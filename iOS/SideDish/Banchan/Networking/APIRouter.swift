@@ -8,16 +8,26 @@
 
 import Foundation
 
-enum MainPageAPIRouter: String, APIBuilder, CaseIterable {
+enum MainPageAPIRouter: APIBuilder, CaseIterable {
     case main
     case soup
     case side
     
     var path: String {
-        return Endpoints.baseURL
+        switch self {
+        case .main: return Endpoints.main
+        case .soup: return Endpoints.soup
+        case .side: return Endpoints.side
+        }
     }
+}
+
+enum DetailPageAPIRouter: APIBuilder {
+    case detail(banchanID: String)
     
-    var query: String? {
-        return "category=\(rawValue)"
+    var path: String {
+        switch self {
+        case let .detail(id): return Endpoints.detail + "/\(id)"
+        }
     }
 }

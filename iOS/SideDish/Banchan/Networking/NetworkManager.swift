@@ -73,9 +73,9 @@ extension NetworkManageable {
         
         do {
             try FileManager.default.copyItem(at: source, to: destination)
-            completion(.success(try! Data(contentsOf: destination)))
+            completion(.success(try Data(contentsOf: destination)))
         } catch let error {
-            completion(.failure(error)); print(error)
+            completion(.failure(error))
         }
     }
     

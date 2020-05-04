@@ -9,5 +9,10 @@
 import Foundation
 
 class Endpoints {
-    static let baseURL = "http://54.180.50.220:8080/banchans"
+    static let baseURL = "https://h3rb9c0ugl.execute-api.ap-northeast-2.amazonaws.com/develop/baminchan"
+    
+    static let main = "\(baseURL)/main"
+    static let soup = "\(baseURL)/soup"
+    static let side = "\(baseURL)/side"
+    static let detail = "\(baseURL)/detail"
 }
