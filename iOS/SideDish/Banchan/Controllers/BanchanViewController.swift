@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  BanchanViewController.swift
 //  Banchan
 //
 //  Created by Chaewan Park on 2020/04/21.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class BanchanViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -22,6 +22,21 @@ class ViewController: UIViewController {
         configureTableView()
         configureViewModel()
         configureUseCase()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: false)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let viewController = segue.destination as? DetailViewController,
+            let indexPath = tableView.indexPathForSelectedRow,
+            let item = viewModel.banchan(category: indexPath.section, index: indexPath.row) else { return }
+        viewController.title = item.title
+        BanchanDetailUseCase.performFetching(with: NetworkManager(), banchanID: item.detailHash) {
+            viewController.descriptionViewModel.update(banchanDetail: $0)
+        }
     }
     
     private func configureTableView() {

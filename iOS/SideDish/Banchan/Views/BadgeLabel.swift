@@ -27,9 +27,8 @@ class BadgeLabel: BorderedLabel {
         font = font.withSize(10)
     }
     
-    func setColor(to color: String) {
-        guard let hexColor = Int(color.trimmingCharacters(in: ["#"]), radix: 16) else { return }
-        backgroundColor = UIColor(inHex: hexColor)
+    func setColor(to color: UIColor) {
+        backgroundColor = color
     }
     
     func setText(to text: String) {
